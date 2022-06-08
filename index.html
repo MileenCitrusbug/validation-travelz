@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="description" content="" />
+<meta name="author" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>travelz.jp</title>
+<meta content='initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width' name='viewport' />
+<meta name="theme-color" content="#FF0000">
+<meta name="msapplication-navbutton-color" content="#FF0000">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#FF0000">
+<link href='assets/images/favicon.png' rel='shortcut icon'>
+<link href="assets/css/style.css" media="all" rel="stylesheet" type="text/css" />
+<link href="assets/css/header.css" media="all" rel="stylesheet" type="text/css" />
+<script src="assets/js/modernizr.js"></script>
+<!--[if IE]>
+<script src="assets/js/html5.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+
+<!-- 
+<div class="loader-root">
+    <div class="loader-div">
+        <img src="assets/images/logo.svg" alt="logo" />
+        <div class="loader-div-center">
+        </div>
+    </div>
+</div> -->
+
+<div id="wrapper" class="wrapper home-wrapper">
+
+	<header style="display: none;" >
+        <div class="header-div clearfix" >
+            <div class="inner-top-header-div clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="header-container">
+
+                                <div class="logo-div">
+                                    <a class="logo_link clearfix" href="index.html">
+                                        <img src="assets/images/logo.png" data-logo-loader class="img-fluid logo_img main-logo" alt="logo" />
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>	
+        </div><!--  End of header with navigation div  -->
+    </header>
+
+    <header class="header-top">
+        <div class="header-div clearfix" >
+            <div class="inner-top-header-div clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="header-container">
+
+                                <div class="logo-div">
+                                    <a class="logo_link clearfix" href="dashboard.html">
+                                        <img src="assets/images/logo-white.svg" class="img-fluid logo_img main-logo" alt="logo" />
+                                    </a>
+                                </div>
+
+                                <nav class="nav-center-div ptb-10">
+                                    <div class="top-nav1">
+                                        <div class="cd-shadow-layer"></div>
+                                        <div class="nav-m-bar"><a onclick="openNav()" class="opennav" data-placement="bottom" title="" data-original-title="Menu">
+                                            <i class="menu-bars"><img src="assets/images/icons/menu-white.svg" alt="menu" /></i></a>
+                                        </div>
+                                        <div class="nav-div clearfix" id="mySidenav" >
+                                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                                            <div class="nav-details-right">
+                                               
+                                                <div class="language-select-box">
+                                                    <select name="" id="paises" class="form-control language-control"></select>
+                                                </div>
+
+                                                <div class="user-drop-down">
+
+                                                    <div class="dropdown drop-left dropdown-custom-top dropdown-without-login" style="display: none;">
+                                                        <a class="btn btn-default btn-flat dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <div class="user-profile">
+                                                                <div class="user-img">
+                                                                    <span class="span-user">
+                                                                        <i class="fe fe-user"></i>
+                                                                    </span>
+                                                                    <!-- <img src="assets/images/user-icon.svg" class="user-top-image" alt="user image" /> -->
+                                                                </div>
+                                                                <div class="user-info">
+                                                                    <h3>My account</h3>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-without-login" aria-labelledby="dropdownMenuLink">
+                                                            <ul>
+                                                                <li><a class="dropdown-item" href="#"> <span class="icon-span"> <i class="fe fe-log-in icon-i"></i> </span> User login</a></li>
+                                                                <li><a class="dropdown-item" href="#"> <span class="icon-span"> <i class="fe fe-plus icon-i"></i> </span> User registration</a></li>
+                                                            </ul>
+                                                            <ul class="travel-ul">
+                                                                <li><a class="dropdown-item" href="#"> <span class="icon-span"> <i class="material-icons icon-i">store</i> </span> Travel Agency registration</a></li>
+                                                                <li><a class="dropdown-item" href="#"> <span class="icon-span"> <i class="fe fe-log-in icon-i"></i> </span> Host sign in</a></li>
+                                                            </ul>                   
+                                                        </div>
+                                                    </div><!--  before login  -->
+
+                                                    <div class="dropdown drop-left dropdown-custom-top dropdown-with-login">
+                                                        <a class="btn btn-default btn-flat dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <div class="user-profile">
+                                                                <div class="user-img">
+                                                                    <img src="assets/images/profile.png" class="user-top-image" alt="user image" />
+                                                                </div>
+                                                                <div class="user-info">
+                                                                    <p>Sign in as</p>
+                                                                    <h3>Sunny Minter</h3>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                            
+                                                            <div class="top-switchbar">
+                                                                <div class="custom-control custom-switch">
+                                                                    <input type="checkbox" class="custom-control-input" id="switch1">
+                                                                    <label class="custom-control-label" for="switch1">Switch to <span class="" id="user-account">User account</span><span class="hide-span" id="travel-account">Travel Agency</span></label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="dropdown-agency-panel" id="agency-panel">
+                                                                <div class="switch-title-heading">
+                                                                    <h2>Travel Agency Panel</h2>
+                                                                </div>
+                                                                <ul>
+                                                                    <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Invite Host</a></li>
+                                                                    <li class="logout-li"><a class="dropdown-item" href="#"> <span class="logout-icon"> <i class="fe fe-log-out"></i> </span> Sign out</a></li>
+                                                                </ul>  
+                                                            </div>  
+                                                            <div class="dropdown-user-panel hide-panel" id="user-panel">
+                                                                
+                                                                <div class="switch-title-heading">
+                                                                    <h2>User Panel</h2>
+                                                                </div>
+                                                                <ul>
+                                                                    <li><a class="dropdown-item" href="#">Timeline</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Travel plan Listing</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Messages</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Profile Edit</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Friends Listing</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Invite Friends</a></li>
+                                                                    <li class="logout-li"><a class="dropdown-item" href="#"> <span class="logout-icon"> <i class="fe fe-log-out"></i> </span> Sign out</a></li>
+                                                                </ul>  
+                                                            </div>                 
+                                                        </div>
+                                                    </div><!--  after login  -->
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>	
+        </div><!--  End of header with navigation div  -->
+    </header>
+	
+    <div class="main-middle-area">
+
+        
+  
+    </div>
+
+    <a href="javascript:" class="return-to-top"><i class="fas fa-chevron-up"></i></a>
+	
+</div><!-- end of wrapper -->
+
+<script src="assets/js/jquery-3.3.1.slim.min.js" ></script>
+<script src="assets/js/jquery.min.js" ></script>
+<script src="assets/js/popper.min.js" ></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/waves.js"></script>
+<script src='https://cdn.jsdelivr.net/g/select2@4.0.3(js/select2.min.js+js/i18n/es.js)'></script>
+<script  src="assets/js/script.js"></script>
+
+<script src="assets/js/custom.js"></script> 
+
+<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet" />	
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+<script>
+    $(document).ready(function(){
+        $(".language-select-box").click(function(){  
+            $(".select2-container").addClass("select-language-container");
+        });
+
+        // $("#user-panel").addClass("hide-panel");
+        // $("#agency-panel").addClass("show-panel");
+
+        $("#switch1").click(function(){  
+            $(this).parent().parent().parent().addClass("show");
+            $("#agency-panel").toggleClass("hide-panel");    
+            $("#user-panel").toggleClass("show-panel");
+
+            $("#user-account").toggleClass("hide-span");    
+            $("#travel-account").toggleClass("show-span");
+
+        });
+        
+    });
+    // language-control
+
+</script>
+
+</body>
+</html>
