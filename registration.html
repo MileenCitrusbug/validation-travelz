@@ -194,6 +194,7 @@
                                     <div class="heading-div"> 
                                         <h2>Choose Occupation</h2>
                                         <p>Enter user name or email and why you want to join!</p>
+                                        <span id="occupation_error"></span>
                                     </div>
                                 </div>
 
@@ -211,7 +212,7 @@
                                                             <p>School Students</p>
                                                         </div>
                                                     </label>
-                                                    <input type="radio" class="form-radio form-radio-occupation" id="opt-radio01" name="occupation-select" />
+                                                    <input type="radio" class="form-radio form-radio-occupation" id="opt-radio01" name="occupation-select" onclick="OccupationValidation()" />
                                                 </div>
                                             </div>
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
@@ -224,7 +225,7 @@
                                                             <p>University Students</p>
                                                         </div>
                                                     </label>
-                                                    <input type="radio" class="form-radio form-radio-occupation" id="opt-radio02" name="occupation-select" />
+                                                    <input type="radio" class="form-radio form-radio-occupation" id="opt-radio02" name="occupation-select"  onclick="OccupationValidation()"/>
                                                 </div>
                                             </div>
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
@@ -237,7 +238,7 @@
                                                             <p>Agriculture</p>
                                                         </div>
                                                     </label>
-                                                    <input type="radio" class="form-radio form-radio-occupation" id="opt-radio03" name="occupation-select" />
+                                                    <input type="radio" class="form-radio form-radio-occupation" id="opt-radio03" name="occupation-select" onclick="OccupationValidation()"/>
                                                 </div>
                                             </div>
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
@@ -250,7 +251,7 @@
                                                             <p>Travel</p>
                                                         </div>
                                                     </label>
-                                                    <input type="radio" class="form-radio form-radio-occupation" id="opt-radio04" name="occupation-select" />
+                                                    <input type="radio" class="form-radio form-radio-occupation" id="opt-radio04" name="occupation-select" onclick="OccupationValidation()"/>
                                                 </div>
                                             </div>
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
@@ -263,8 +264,9 @@
                                                             <p>Other</p>
                                                         </div>
                                                     </label>
-                                                    <input type="radio" class="form-radio form-radio-occupation" id="opt-radio05" name="occupation-select" />
+                                                    <input type="radio" class="form-radio form-radio-occupation" id="opt-radio05" name="occupation-select" onclick="OccupationValidation()"/>
                                                 </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -309,6 +311,7 @@
                                     <div class="heading-div"> 
                                         <h2>Choose Age Group</h2>
                                         <p>Select age group and continue!</p>
+                                        <span id="age_error"></span>
                                     </div>
                                 </div>
 
@@ -323,7 +326,7 @@
                                                             <p>-19</p>
                                                         </div>
                                                     </label>
-                                                    <input type="radio" class="form-radio form-radio-age-group" id="opt-age-group01" name="age-group-select" />
+                                                    <input type="radio" class="form-radio form-radio-age-group" id="opt-age-group01" name="age-group-select" onclick="AgeValidation()" />
                                                 </div>
                                             </div>
                                             <div class="col-lg-2 col-md-2 grid-125 plr-8">
@@ -333,7 +336,7 @@
                                                             <p>20</p>
                                                         </div>
                                                     </label>
-                                                    <input type="radio" class="form-radio form-radio-age-group" id="opt-age-group02" name="age-group-select" />
+                                                    <input type="radio" class="form-radio form-radio-age-group" id="opt-age-group02" name="age-group-select" onclick="AgeValidation()"/>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2 col-md-2 grid-125 plr-8">
@@ -343,7 +346,7 @@
                                                             <p>30</p>
                                                         </div>
                                                     </label>
-                                                    <input type="radio" class="form-radio form-radio-age-group" id="opt-age-group03" name="age-group-select" />
+                                                    <input type="radio" class="form-radio form-radio-age-group" id="opt-age-group03" name="age-group-select" onclick="AgeValidation()"/>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2 col-md-2 grid-125 plr-8">
@@ -353,7 +356,7 @@
                                                             <p>40</p>
                                                         </div>
                                                     </label>
-                                                    <input type="radio" class="form-radio form-radio-age-group" id="opt-age-group04" name="age-group-select" />
+                                                    <input type="radio" class="form-radio form-radio-age-group" id="opt-age-group04" name="age-group-select" onclick="AgeValidation()"/>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2 col-md-2 grid-125 plr-8">
@@ -363,7 +366,7 @@
                                                             <p>50</p>
                                                         </div>
                                                     </label>
-                                                    <input type="radio" class="form-radio form-radio-age-group" id="opt-age-group05" name="age-group-select" />
+                                                    <input type="radio" class="form-radio form-radio-age-group" id="opt-age-group05" name="age-group-select" onclick="AgeValidation()"/>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2 col-md-2 grid-125 plr-8">
@@ -373,7 +376,7 @@
                                                             <p>60+</p>
                                                         </div>
                                                     </label>
-                                                    <input type="radio" class="form-radio form-radio-age-group" id="opt-age-group06" name="age-group-select" />
+                                                    <input type="radio" class="form-radio form-radio-age-group" id="opt-age-group06" name="age-group-select" onclick="AgeValidation()"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -381,7 +384,7 @@
                                             <div class="col-lg-12 col-md-12 plr-8">
                                                 <div class="checkbox-select-root">
                                                     <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" onclick="AgeValidation()">
                                                         <label class="custom-control-label" for="customCheck">Undisclosed age</label>
                                                       </div>
                                                 </div>
@@ -429,6 +432,7 @@
                                     <div class="heading-div"> 
                                         <h2>Select Areas to Follow</h2>
                                         <p>Select area and continue!</p>
+                                        <span id="area_error"></span>
                                     </div>
                                 </div>
 
@@ -470,7 +474,7 @@
                                                             <h4>Akihabara</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option01" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option01" onclick="AreaValidation()"/>
                                                 </div>
                                             </div>
 
@@ -489,7 +493,7 @@
                                                             <h4>Asakusa</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option02" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option02" onclick="AreaValidation()"/>
                                                 </div>
                                             </div>
 
@@ -508,7 +512,7 @@
                                                             <h4>Harajuku</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option03" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option03" onclick="AreaValidation()"/>
                                                 </div>
                                             </div>
 
@@ -527,7 +531,7 @@
                                                             <h4>Shibuya</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option04" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option04" onclick="AreaValidation()"/>
                                                 </div>
                                             </div>
 
@@ -546,7 +550,7 @@
                                                             <h4>Ueno</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option05" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option05" onclick="AreaValidation()"/>
                                                 </div>
                                             </div>
 
@@ -565,7 +569,7 @@
                                                             <h4>Akihabara</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option06" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option06" onclick="AreaValidation()"/>
                                                 </div>
                                             </div>
 
@@ -584,7 +588,7 @@
                                                             <h4>Asakusa</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option07" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option07" onclick="AreaValidation()"/>
                                                 </div>
                                             </div>
 
@@ -603,7 +607,7 @@
                                                             <h4>Harajuku</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option08" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option08" onclick="AreaValidation()"/>
                                                 </div>
                                             </div>
 
@@ -622,7 +626,7 @@
                                                             <h4>Shibuya</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option09" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option09" onclick="AreaValidation()"/>
                                                 </div>
                                             </div>
 
@@ -641,7 +645,7 @@
                                                             <h4>Ueno</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option10" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-areas" id="select-area-option10" onclick="AreaValidation()"/>
                                                 </div>
                                             </div>
 
@@ -688,6 +692,7 @@
                                     <div class="heading-div"> 
                                         <h2>Select Users to Follow</h2>
                                         <p>Select user and continue!</p>
+                                        <span id="user_error"></span>
                                     </div>
                                 </div>
 
@@ -730,7 +735,7 @@
                                                             <p>sunnymint@gmail.com</p>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option01" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option01"onclick="UserValidation()"/>
                                                 </div>
                                             </div>
 
@@ -746,11 +751,11 @@
                                                             <img src="assets/images/user/user2.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>sunny</h4>
-                                                            <p>sunnymint@gmail.com</p>
+                                                            <h4>rohi</h4>
+                                                            <p>rohimint@gmail.com</p>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option02" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option02" onclick="UserValidation()"/>
                                                 </div>
                                             </div>
 
@@ -766,11 +771,11 @@
                                                             <img src="assets/images/user/user3.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>sunny</h4>
-                                                            <p>sunnymint@gmail.com</p>
+                                                            <h4>eneio</h4>
+                                                            <p>eneiomint@gmail.com</p>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option03" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option03"onclick="UserValidation()" />
                                                 </div>
                                             </div>
 
@@ -786,11 +791,11 @@
                                                             <img src="assets/images/user/user4.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>sunny</h4>
-                                                            <p>sunnymint@gmail.com</p>
+                                                            <h4>lana</h4>
+                                                            <p>lanamint@gmail.com</p>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option04" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option04"onclick="UserValidation()" />
                                                 </div>
                                             </div>
 
@@ -806,11 +811,11 @@
                                                             <img src="assets/images/user/user5.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>sunny</h4>
-                                                            <p>sunnymint@gmail.com</p>
+                                                            <h4>mike</h4>
+                                                            <p>mikemint@gmail.com</p>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option05" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option05"onclick="UserValidation()" />
                                                 </div>
                                             </div>
 
@@ -826,11 +831,11 @@
                                                             <img src="assets/images/user/user6.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>sunny</h4>
-                                                            <p>sunnymint@gmail.com</p>
+                                                            <h4>ele</h4>
+                                                            <p>elemint@gmail.com</p>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option06" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option06"onclick="UserValidation()" />
                                                 </div>
                                             </div>
 
@@ -846,11 +851,11 @@
                                                             <img src="assets/images/user/user7.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>sunny</h4>
-                                                            <p>sunnymint@gmail.com</p>
+                                                            <h4>krina</h4>
+                                                            <p>krinaint@gmail.com</p>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option07" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option07" onclick="UserValidation()"/>
                                                 </div>
                                             </div>
 
@@ -866,11 +871,11 @@
                                                             <img src="assets/images/user/user8.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>sunny</h4>
-                                                            <p>sunnymint@gmail.com</p>
+                                                            <h4>rami</h4>
+                                                            <p>ramimint@gmail.com</p>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option08" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option08" onclick="UserValidation()"/>
                                                 </div>
                                             </div>
 
@@ -886,11 +891,11 @@
                                                             <img src="assets/images/user/user9.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>sunny</h4>
-                                                            <p>sunnymint@gmail.com</p>
+                                                            <h4>sood</h4>
+                                                            <p>soodmint@gmail.com</p>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option09" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option09" onclick="UserValidation()"/>
                                                 </div>
                                             </div>
 
@@ -906,11 +911,11 @@
                                                             <img src="assets/images/user/user10.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>sunny</h4>
-                                                            <p>sunnymint@gmail.com</p>
+                                                            <h4>sern</h4>
+                                                            <p>sernint@gmail.com</p>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option10" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option10"onclick="UserValidation()" />
                                                 </div>
                                             </div>
 
@@ -926,11 +931,11 @@
                                                             <img src="assets/images/user/user9.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>sunny</h4>
-                                                            <p>sunnymint@gmail.com</p>
+                                                            <h4>simon</h4>
+                                                            <p>simonmint@gmail.com</p>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option11" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option11"onclick="UserValidation()" />
                                                 </div>
                                             </div>
 
@@ -946,11 +951,11 @@
                                                             <img src="assets/images/user/user4.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>sunny</h4>
-                                                            <p>sunnymint@gmail.com</p>
+                                                            <h4>keri</h4>
+                                                            <p>kerimint@gmail.com</p>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option12" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option12" onclick="UserValidation()"/>
                                                 </div>
                                             </div>
 
@@ -966,11 +971,11 @@
                                                             <img src="assets/images/user/user1.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>sunny</h4>
-                                                            <p>sunnymint@gmail.com</p>
+                                                            <h4>nody</h4>
+                                                            <p>nodymint@gmail.com</p>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option13" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option13"onclick="UserValidation()" />
                                                 </div>
                                             </div>
 
@@ -986,11 +991,11 @@
                                                             <img src="assets/images/user/user5.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>sunny</h4>
-                                                            <p>sunnymint@gmail.com</p>
+                                                            <h4>ane</h4>
+                                                            <p>enemint@gmail.com</p>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option14" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option14"onclick="UserValidation()" />
                                                 </div>
                                             </div>
 
@@ -1006,11 +1011,11 @@
                                                             <img src="assets/images/user/user2.jpg" class="img-fluid img-user" alt="follow" />
                                                         </div>
                                                         <div class="check-title-row">
-                                                            <h4>sunny</h4>
-                                                            <p>sunnymint@gmail.com</p>
+                                                            <h4>viky</h4>
+                                                            <p>vikymint@gmail.com</p>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option15" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-follow" id="select-follow-option15" onclick="UserValidation()"/>
                                                 </div>
                                             </div>
 
@@ -1057,6 +1062,7 @@
                                     <div class="heading-div"> 
                                         <h2>Select Group to Follow</h2>
                                         <p>Select group and continue!</p>
+                                        <span id="group_error"> </span>
                                     </div>
                                 </div>
 
@@ -1098,7 +1104,7 @@
                                                             <h4>Akihabara</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option01" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option01" onclick="GroupValidation()" />
                                                 </div>
                                             </div>
 
@@ -1117,7 +1123,7 @@
                                                             <h4>Asakusa</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option02" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option02" onclick="GroupValidation()" />
                                                 </div>
                                             </div>
 
@@ -1136,7 +1142,7 @@
                                                             <h4>Harajuku</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option03" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option03" onclick="GroupValidation()"/>
                                                 </div>
                                             </div>
 
@@ -1155,7 +1161,7 @@
                                                             <h4>Shibuya</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option04" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option04" onclick="GroupValidation()"/>
                                                 </div>
                                             </div>
 
@@ -1174,7 +1180,7 @@
                                                             <h4>Ueno</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option05" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option05" onclick="GroupValidation()"/>
                                                 </div>
                                             </div>
 
@@ -1193,7 +1199,7 @@
                                                             <h4>Akihabara</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option06" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option06" onclick="GroupValidation()"/>
                                                 </div>
                                             </div>
 
@@ -1212,7 +1218,7 @@
                                                             <h4>Asakusa</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option07" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option07" onclick="GroupValidation()"/>
                                                 </div>
                                             </div>
 
@@ -1231,7 +1237,7 @@
                                                             <h4>Harajuku</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option08" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option08" onclick="GroupValidation()"/>
                                                 </div>
                                             </div>
 
@@ -1250,7 +1256,7 @@
                                                             <h4>Shibuya</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option09" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option09" onclick="GroupValidation()"/>
                                                 </div>
                                             </div>
 
@@ -1269,7 +1275,7 @@
                                                             <h4>Ueno</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option10" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option10" onclick="GroupValidation()"/>
                                                 </div>
                                             </div>
 
@@ -1288,7 +1294,7 @@
                                                             <h4>Akihabara</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option11" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option11" onclick="GroupValidation()"/>
                                                 </div>
                                             </div>
 
@@ -1307,7 +1313,7 @@
                                                             <h4>Asakusa</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option12" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option12" onclick="GroupValidation()"/>
                                                 </div>
                                             </div>
 
@@ -1326,7 +1332,7 @@
                                                             <h4>Harajuku</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option13" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option13" onclick="GroupValidation()"/>
                                                 </div>
                                             </div>
 
@@ -1345,7 +1351,7 @@
                                                             <h4>Shibuya</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option14" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option14" onclick="GroupValidation()"/>
                                                 </div>
                                             </div>
 
@@ -1364,7 +1370,7 @@
                                                             <h4>Ueno</h4>
                                                         </div>
                                                     </label>
-                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option15" />
+                                                    <input type="checkbox" class="form-checkbox form-checkbox-groups" id="select-groups-option15" onclick="GroupValidation()"/>
                                                 </div>
                                             </div>
 
@@ -1423,7 +1429,8 @@
                                                     <div class="form-group">
                                                         <label for="">Enter password</label>
                                                         <div class="input-group-box password-box">
-                                                            <input type="password" class="form-control" name="password" id="password" placeholder="Enter password">
+                                                            <input type="password" class="form-control" name="password" id="password" placeholder="Enter password" onkeyup="passwordValidation()">
+                                                            <span id="password1"></span>
                                                             <button type="button" id="show_password" name="show_password" class="pass-hide password-view-click"><i class="material-icons password-view">remove_red_eye</i></button> 
                                                         </div>
                                                     </div>
@@ -1434,7 +1441,8 @@
                                                     <div class="form-group">
                                                         <label for="">Confirm password</label>
                                                         <div class="input-group-box password-box">
-                                                            <input type="password" class="form-control" name="password" id="confirm-password" placeholder="Enter confirm password">
+                                                            <input type="password" class="form-control" name="password" id="confirm-password" placeholder="Enter confirm password" onkeyup="ConfpassValidation()">
+                                                            <span id="confpass"></span>
                                                             <button type="button" id="show_password2" name="show_password" class="pass-hide password-view-click"><i class="material-icons password-view">remove_red_eye</i></button> 
                                                         </div>
                                                     </div>
@@ -1482,6 +1490,7 @@
                                     <div class="heading-div"> 
                                         <h2>What to do next</h2>
                                         <p>Choose option and continue!</p>
+                                        <span id="next_error"></span>
                                     </div>
                                 </div>
 
@@ -1499,7 +1508,7 @@
                                                             <p>Proceed to Timeline</p>
                                                         </div>
                                                     </label>
-                                                    <input type="radio" class="form-radio form-radio-what-to-do" id="what-to-do-radio01" name="what-to-do-select" />
+                                                    <input type="radio" class="form-radio form-radio-what-to-do" id="what-to-do-radio01" name="what-to-do-select"onclick="WhatnextValidation()" />
                                                 </div>
                                             </div>
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
@@ -1512,7 +1521,7 @@
                                                             <p>Create a Map</p>
                                                         </div>
                                                     </label>
-                                                    <input type="radio" class="form-radio form-radio-what-to-do" id="what-to-do-radio02" name="what-to-do-select" />
+                                                    <input type="radio" class="form-radio form-radio-what-to-do" id="what-to-do-radio02" name="what-to-do-select" onclick="WhatnextValidation()" />
                                                 </div>
                                             </div>
                                             <div class="col-lg-3 col-md-3 grid-20 plr-8">
@@ -1525,7 +1534,7 @@
                                                             <p>Create a travel plan</p>
                                                         </div>
                                                     </label>
-                                                    <input type="radio" class="form-radio form-radio-what-to-do" id="what-to-do-radio03" name="what-to-do-select" />
+                                                    <input type="radio" class="form-radio form-radio-what-to-do" id="what-to-do-radio03" name="what-to-do-select" onclick="WhatnextValidation()"/>
                                                 </div>
                                             </div>
                                             

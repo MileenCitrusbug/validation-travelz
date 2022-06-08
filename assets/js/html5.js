@@ -28,6 +28,8 @@
 var NAMEerror = document.getElementById("name-error");
 var EMAILerror = document.getElementById("email-error");
 var SUBMITerror = document.getElementById("fill");
+var PASSerror = document.getElementById("password1");
+var CONFPASSerror = document.getElementById("confpass")
 
 function NameValidation() {
   var name = document.getElementById("namechange").value;
@@ -35,7 +37,7 @@ function NameValidation() {
     NAMEerror.innerHTML = "Name required";
     return false;
   }
-  if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+  if (!name.match( /^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
     NAMEerror.innerHTML = "Please enter full name";
     return false;
   }
@@ -45,7 +47,7 @@ function NameValidation() {
 
 function EmailValidation() {
   var email = document.getElementById('emailchange').value;
-  var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  var validRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
   if (!email.match(validRegex)) {
     EMAILerror.innerHTML = "Please enter valid email";
     return false;
@@ -59,46 +61,172 @@ function EmailValidation() {
 
 }
 
+function passwordValidation(){
+  var pw = document.getElementById("password").value;
+  var validpass = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/
+  if(pw == "") {  
+    document.getElementById("password1").innerHTML = "**Fill the password please!";  
+    return false;  
+ }  
+ if(pw.length < 8) {  
+  document.getElementById("password1").innerHTML = "**Password length must be atleast 8 characters";  
+  return false;  
+} 
+if  (!pw.match(validpass)) {
+  document.getElementById("password1").innerHTML = "**password should contain atleast one number and one special character";  
+  return false;  
+
+}
+PASSerror.innerHTML = '<i class="fas fa-check"></i> ';
+return true;
+
+}
+
+function ConfpassValidation(){
+var p1=document.getElementById("password").value;
+var p2=document.getElementById("confirm-password").value;
+console.log(p1+p2)
+if(p1!=p2){
+  document.getElementById("confpass").innerHTML = "**Please enter same password!";
+}
+else{
+document.getElementById("confpass").innerHTML =   '<i class="fas fa-check"></i> ';
+ return true;}
+}
 
 
 function OccupationValidation() {
-  var occupation = document.getElementsByName('occupation-select').value
   
-  for (i = 0; i < occupation.length; i++) {
-    if (occupation[i].checked)
-      return true;
-  }
-  fill.innerHTML = "Please Select Occupation";
-
-}
+  
+    var getSelectedValue = document.querySelector(   
+        'input[name="occupation-select"]:checked');   
+        
+    if(getSelectedValue != null) {   
+        return true; 
+    }   
+    else {   
+      document.getElementById("occupation_error").innerHTML="";
+       return false; 
+    }   
+}  
 
 
 function AgeValidation(){
-  var age = document.getElementsByTagName('age-group-select').value
+  var getSelectedValue = document.querySelector(   
+    'input[name="age-group-select"]:checked');   
+    
+if(getSelectedValue != null) {   
+ 
+  return true;
+
+
+}   
+else {   
+  if(document.getElementById('customCheck').checked)  
+  {return true}
+  else{ 
+  return false; 
+} }
 
 }
 
 
-function SubmitValidation() {
-  if (!NameValidation() || !EmailValidation()) {
+function AreaValidation(){
+  var getSelectedValue = document.getElementsByClassName("form-checkbox form-checkbox-areas");
+  var count = 0;
+  for (var i=0;i<getSelectedValue.length;i++){
+    if(getSelectedValue[i].checked===true){
+      count++;
+    }  
+  }if (count<2){
+    document.getElementById("area_error").innerHTML="**Select minimum 2 group!";
+    return false;
+  }
+  else { document.getElementById("area_error").innerHTML="";}
+    return true;
+}
+
+
+function UserValidation(){
+  var getSelectedValue = document.getElementsByClassName("form-checkbox form-checkbox-follow");
+  var count = 0;
+  for (var i=0;i<getSelectedValue.length;i++){
+    if(getSelectedValue[i].checked===true){
+      count++;}
+      
+   }if (count<3){
+    document.getElementById("user_error").innerHTML="**Select minimum 3 user!";
+    return false;
+  } else { document.getElementById("user_error").innerHTML="";}
+  return true;
     
-    fill.innerHTML = 'Please fill the fields';
+}
+
+
+function GroupValidation(){
+  var getSelectedValue = document.getElementsByClassName("form-checkbox form-checkbox-groups");
+  var count = 0;
+  for (var i=0;i<getSelectedValue.length;i++){
+    if(getSelectedValue[i].checked===true){
+      count++;}
+   
+    }if (count<3){
+      document.getElementById("group_error").innerHTML="**Select minimum 3 group!";
+      return false;
+    } else { document.getElementById("group_error").innerHTML="";}
+    return true;
+    
+}
+
+function WhatnextValidation(){
+  var getSelectedValue = document.querySelector(   
+    'input[name="what-to-do-select"]:checked');   
+    
+if(getSelectedValue != null) {   
+    return true; 
+}   
+else {   
  
+   return false; 
+}
 
+}
+
+
+
+
+
+
+function SubmitValidation() {
+  if (!NameValidation() ) {
+    
+    NAMEerror.innerHTML = "Name required";
+ }
+  if ( !EmailValidation()){
+    EMAILerror.innerHTML = "Email required";
+  }
+  if (!OccupationValidation()){
+    document.getElementById("occupation_error").innerHTML="**Select occupation!";
+
+  }else{ document.getElementById("occupation_error").innerHTML="";}
+  if(!AgeValidation()){
+    document.getElementById("age_error").innerHTML="**Select age group!";
+  }else{ document.getElementById("age_error").innerHTML="";}
+  if(!AreaValidation()){
+    document.getElementById("area_error").innerHTML="**Select area to follow!";
+  }else{ document.getElementById("area_error").innerHTML="";}
+  if(!UserValidation()){
+    document.getElementById("user_error").innerHTML="**Select user to follow!";
+  }else{ document.getElementById("user_error").innerHTML="";}
+  if(!GroupValidation()){
+    document.getElementById("group_error").innerHTML="**Select group to follow!";
+  }else {document.getElementById("group_error").innerHTML="";}
+  if(!WhatnextValidation()){
+    document.getElementById("next_error").innerHTML="**Please choose!";
+  }else{
+  window.location.href = "index.html";
+  }
   }
 
-    //  function OccupationValidation() {
-    //    var occupation = document.getElementsByName('occupation-select').values
-        
-    //   for (i = 0; i < occupation.length; i++) 
-    //   if (occupation[i].checked){
-    //     return true;
-    // }
-
-  else if (!OccupationValidation()){}
-
-
-
-  }
 
 
