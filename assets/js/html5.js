@@ -85,7 +85,6 @@ return true;
 function ConfpassValidation(){
 var p1=document.getElementById("password").value;
 var p2=document.getElementById("confirm-password").value;
-console.log(p1+p2)
 if(p1!=p2){
   document.getElementById("confpass").innerHTML = "**Please enter same password!";
 }
@@ -223,10 +222,48 @@ function SubmitValidation() {
   }else {document.getElementById("group_error").innerHTML="";}
   if(!WhatnextValidation()){
     document.getElementById("next_error").innerHTML="**Please choose!";
-  }else{
-  window.location.href = "index.html";
+  }else{debugger
+  
+     let Registeration_data=[];
+    //  var user_name
+    //  element = document.getElementById("namechange")
+    //  if ( element!= null) {
+    //      user_name = element.value;
+    //  }
+    //  else {
+    //  user_name = null;
+    //  }
+    //  var user_email
+    //  element =  document.getElementById("emailchange")
+    //  if ( element != null) {
+    //   user_email = element.value;
+    //  }
+    //  else {
+    //   user_email = null;
+    //  }
+
+ 
+     let data = {
+       name:document.getElementById("namechange").value,
+       email: document.getElementById("emailchange").value,
+       occupation: document.querySelector('input[name="occupation-select"]:checked').id,
+       age_group: document.querySelector('input[name="age-group-select"]:checked').id,
+       follow_area: document.querySelector('input[class="form-checkbox form-checkbox-areas"]:checked').id,
+       follow_user: document.querySelector('input[class="form-checkbox form-checkbox-follow"]:checked').id,
+       follow_group: document.querySelector('input[class="form-checkbox form-checkbox-groups"]:checked').id,
+       password:document.getElementById("password").value,
+       next_step:  document.querySelector('input[name="what-to-do-select"]:checked').value,
+      }
+      
+      // Registeration_data.push(data);
+    
+      Registeration_data.push(data);
+      // var x= JSON.stringify (Registeration_data);
+      localStorage.setItem("user_data",JSON.stringify(Registeration_data));  
+      console.log( Registeration_data)
+      window.location.href = "user_data.html";
+
+  // window.location.href = "index.html";
   }
   }
-
-
-
+  

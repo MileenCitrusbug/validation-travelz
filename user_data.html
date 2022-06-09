@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<p><center>User Data File</center></p>
+<br><br><br><br>
+<p id="data"></p>
+<button onclick="return1()">click for registration page</button>
+
+<script>
+    var d=localStorage.getItem("user_data");
+    var j= JSON.parse(d);
+    console.log(j)
+    document.getElementById("data").innerHTML=d
+
+
+    function return1(){
+        window.location.href = "registration.html";
+
+    }
+
+
+</script>
+    
+</body>
+</html>
