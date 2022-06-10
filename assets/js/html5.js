@@ -37,7 +37,7 @@ function NameValidation() {
     NAMEerror.innerHTML = "Name required";
     return false;
   }
-  if (!name.match( /^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+  if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
     NAMEerror.innerHTML = "Please enter full name";
     return false;
   }
@@ -61,209 +61,300 @@ function EmailValidation() {
 
 }
 
-function passwordValidation(){
+function passwordValidation() {
   var pw = document.getElementById("password").value;
   var validpass = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/
-  if(pw == "") {  
-    document.getElementById("password1").innerHTML = "**Fill the password please!";  
-    return false;  
- }  
- if(pw.length < 8) {  
-  document.getElementById("password1").innerHTML = "**Password length must be atleast 8 characters";  
-  return false;  
-} 
-if  (!pw.match(validpass)) {
-  document.getElementById("password1").innerHTML = "**password should contain atleast one number and one special character";  
-  return false;  
+  if (pw == "") {
+    document.getElementById("password1").innerHTML = "**Fill the password please!";
+    return false;
+  }
+  if (pw.length < 8) {
+    document.getElementById("password1").innerHTML = "**Password length must be atleast 8 characters";
+    return false;
+  }
+  if (!pw.match(validpass)) {
+    document.getElementById("password1").innerHTML = "**password should contain atleast one number and one special character";
+    return false;
+
+  }
+  PASSerror.innerHTML = '<i class="fas fa-check"></i> ';
+  return true;
 
 }
-PASSerror.innerHTML = '<i class="fas fa-check"></i> ';
-return true;
 
-}
-
-function ConfpassValidation(){
-var p1=document.getElementById("password").value;
-var p2=document.getElementById("confirm-password").value;
-if(p1!=p2){
-  document.getElementById("confpass").innerHTML = "**Please enter same password!";
-}
-else{
-document.getElementById("confpass").innerHTML =   '<i class="fas fa-check"></i> ';
- return true;}
+function ConfpassValidation() {
+  var p1 = document.getElementById("password").value;
+  var p2 = document.getElementById("confirm-password").value;
+  if (p1 != p2) {
+    document.getElementById("confpass").innerHTML = "**Please enter same password!";
+  }
+  else {
+    document.getElementById("confpass").innerHTML = '<i class="fas fa-check"></i> ';
+    return true;
+  }
 }
 
 
 function OccupationValidation() {
-  
-  
-    var getSelectedValue = document.querySelector(   
-        'input[name="occupation-select"]:checked');   
-        
-    if(getSelectedValue != null) {   
-        return true; 
-    }   
-    else {   
-      document.getElementById("occupation_error").innerHTML="";
-       return false; 
-    }   
-}  
 
 
-function AgeValidation(){
-  var getSelectedValue = document.querySelector(   
-    'input[name="age-group-select"]:checked');   
-    
-if(getSelectedValue != null) {   
- 
-  return true;
+  var getSelectedValue = document.querySelector(
+    'input[name="occupation-select"]:checked');
 
-
-}   
-else {   
-  if(document.getElementById('customCheck').checked)  
-  {return true}
-  else{ 
-  return false; 
-} }
-
-}
-
-
-function AreaValidation(){
-  var getSelectedValue = document.getElementsByClassName("form-checkbox form-checkbox-areas");
-  var count = 0;
-  for (var i=0;i<getSelectedValue.length;i++){
-    if(getSelectedValue[i].checked===true){
-      count++;
-    }  
-  }if (count<2){
-    document.getElementById("area_error").innerHTML="**Select minimum 2 group!";
+  if (getSelectedValue != null) {
+    document.getElementById("occupation_error").innerHTML = "";
+    return true;
+  }
+  else {
+    document.getElementById("occupation_error").innerHTML = "**Select occupation!";
     return false;
   }
-  else { document.getElementById("area_error").innerHTML="";}
-    return true;
 }
 
 
-function UserValidation(){
+function AgeValidation() {
+  var getSelectedValue = document.querySelector(
+    'input[name="age-group-select"]:checked');
+
+  if (getSelectedValue != null) {      document.getElementById("age_error").innerHTML = "";
+
+    return true;
+
+
+  }
+  else {
+    if (document.getElementById('customCheck').checked) { return true }
+    else {
+      document.getElementById("age_error").innerHTML = "**Select age group!";
+      return false;
+    }
+  }
+
+}
+
+
+function AreaValidation() {
+  var getSelectedValue = document.getElementsByClassName("form-checkbox form-checkbox-areas");
+  var count = 0;
+  for (var i = 0; i < getSelectedValue.length; i++) {
+    if (getSelectedValue[i].checked === true) {
+      count++;
+    }
+  } if (count < 2) {
+    document.getElementById("area_error").innerHTML = "**Select minimum 2 group!";
+    return false;
+  }
+  else { document.getElementById("area_error").innerHTML = ""; }
+  return true;
+}
+
+
+function UserValidation() {
   var getSelectedValue = document.getElementsByClassName("form-checkbox form-checkbox-follow");
   var count = 0;
-  for (var i=0;i<getSelectedValue.length;i++){
-    if(getSelectedValue[i].checked===true){
-      count++;}
-      
-   }if (count<3){
-    document.getElementById("user_error").innerHTML="**Select minimum 3 user!";
+  for (var i = 0; i < getSelectedValue.length; i++) {
+    if (getSelectedValue[i].checked === true) {
+      count++;
+    }
+
+  } if (count < 3) {
+    document.getElementById("user_error").innerHTML = "**Select minimum 3 user!";
     return false;
-  } else { document.getElementById("user_error").innerHTML="";}
+  } else { document.getElementById("user_error").innerHTML = ""; }
   return true;
-    
+
 }
 
 
-function GroupValidation(){
+function GroupValidation() {
   var getSelectedValue = document.getElementsByClassName("form-checkbox form-checkbox-groups");
   var count = 0;
-  for (var i=0;i<getSelectedValue.length;i++){
-    if(getSelectedValue[i].checked===true){
-      count++;}
-   
-    }if (count<3){
-      document.getElementById("group_error").innerHTML="**Select minimum 3 group!";
-      return false;
-    } else { document.getElementById("group_error").innerHTML="";}
+  for (var i = 0; i < getSelectedValue.length; i++) {
+    if (getSelectedValue[i].checked === true) {
+      count++;
+    }
+
+  } if (count < 3) {
+    document.getElementById("group_error").innerHTML = "**Select minimum 3 group!";
+    return false;
+  } else { document.getElementById("group_error").innerHTML = ""; }
+  return true;
+
+}
+
+function WhatnextValidation() {
+  var getSelectedValue = document.querySelector(
+    'input[name="what-to-do-select"]:checked');
+
+  if (getSelectedValue != null) {
     return true;
-    
-}
+  }
+  else {
 
-function WhatnextValidation(){
-  var getSelectedValue = document.querySelector(   
-    'input[name="what-to-do-select"]:checked');   
-    
-if(getSelectedValue != null) {   
-    return true; 
-}   
-else {   
- 
-   return false; 
-}
+    return false;
+  }
 
 }
-
-
-
 
 
 
 function SubmitValidation() {
-  if (!NameValidation() ) {
-    
+  if (!NameValidation()) {
+
     NAMEerror.innerHTML = "Name required";
- }
-  if ( !EmailValidation()){
+  }
+  if (!EmailValidation()) {
     EMAILerror.innerHTML = "Email required";
   }
-  if (!OccupationValidation()){
-    document.getElementById("occupation_error").innerHTML="**Select occupation!";
+  if (!OccupationValidation()) {
+    document.getElementById("occupation_error").innerHTML = "**Select occupation!";
 
-  }else{ document.getElementById("occupation_error").innerHTML="";}
-  if(!AgeValidation()){
-    document.getElementById("age_error").innerHTML="**Select age group!";
-  }else{ document.getElementById("age_error").innerHTML="";}
-  if(!AreaValidation()){
-    document.getElementById("area_error").innerHTML="**Select area to follow!";
-  }else{ document.getElementById("area_error").innerHTML="";}
-  if(!UserValidation()){
-    document.getElementById("user_error").innerHTML="**Select user to follow!";
-  }else{ document.getElementById("user_error").innerHTML="";}
-  if(!GroupValidation()){
-    document.getElementById("group_error").innerHTML="**Select group to follow!";
-  }else {document.getElementById("group_error").innerHTML="";}
-  if(!WhatnextValidation()){
-    document.getElementById("next_error").innerHTML="**Please choose!";
-  }else{debugger
-  
-     let Registeration_data=[];
-    //  var user_name
-    //  element = document.getElementById("namechange")
-    //  if ( element!= null) {
-    //      user_name = element.value;
-    //  }
-    //  else {
-    //  user_name = null;
-    //  }
-    //  var user_email
-    //  element =  document.getElementById("emailchange")
-    //  if ( element != null) {
-    //   user_email = element.value;
-    //  }
-    //  else {
-    //   user_email = null;
-    //  }
+  } else { document.getElementById("occupation_error").innerHTML = ""; }
+  if (!AgeValidation()) {
+    document.getElementById("age_error").innerHTML = "**Select age group!";
+  } else { document.getElementById("age_error").innerHTML = ""; }
+  if (!AreaValidation()) {
+    document.getElementById("area_error").innerHTML = "**Select area to follow!";
+  } else { document.getElementById("area_error").innerHTML = ""; }
+  if (!UserValidation()) {
+    document.getElementById("user_error").innerHTML = "**Select user to follow!";
+  } else { document.getElementById("user_error").innerHTML = ""; }
+  if (!GroupValidation()) {
+    document.getElementById("group_error").innerHTML = "**Select group to follow!";
+  } else { document.getElementById("group_error").innerHTML = ""; }
+  if (!WhatnextValidation()) {
+    document.getElementById("next_error").innerHTML = "**Please choose!";
+  } else {
 
+
+    let Registeration_data = [];
+    let data = {
+      name: document.getElementById("namechange").value,
+      email: document.getElementById("emailchange").value,
+      occupation: document.querySelector('input[name="occupation-select"]:checked').id,
+      age_group: document.querySelector('input[name="age-group-select"]:checked').id,
+      follow_area: document.querySelector('input[class="form-checkbox form-checkbox-areas"]:checked').id,
+      follow_user: document.querySelector('input[class="form-checkbox form-checkbox-follow"]:checked').id,
+      follow_group: document.querySelector('input[class="form-checkbox form-checkbox-groups"]:checked').id,
+      password: document.getElementById("password").value,
+      next_step: document.querySelector('input[name="what-to-do-select"]:checked').value,
+    }
+
+    Registeration_data.push(data);
+    localStorage.setItem("user_data", JSON.stringify(Registeration_data));
+    console.log(Registeration_data)
+    window.location.href = "user_data.html";
+
+
+  }
+}
+
+// window.addEventListener('scroll',( )=>{
+
+// const tscroll=document.documentElement.scrollHeight - window.innerHeight;
+// const scrolled=window.scrollY;
+// console.log(scrolled);
+
+// if (scrolled>200){
+//   if(!NameValidation() || !EmailValidation()){
+//   // alert("Please!! fill the Name and Email field first ")
+//   window.scrollTo({
+//     top: 10,
+//     left:0,
+//     behavior: 'instant'
+//     });
  
-     let data = {
-       name:document.getElementById("namechange").value,
-       email: document.getElementById("emailchange").value,
-       occupation: document.querySelector('input[name="occupation-select"]:checked').id,
-       age_group: document.querySelector('input[name="age-group-select"]:checked').id,
-       follow_area: document.querySelector('input[class="form-checkbox form-checkbox-areas"]:checked').id,
-       follow_user: document.querySelector('input[class="form-checkbox form-checkbox-follow"]:checked').id,
-       follow_group: document.querySelector('input[class="form-checkbox form-checkbox-groups"]:checked').id,
-       password:document.getElementById("password").value,
-       next_step:  document.querySelector('input[name="what-to-do-select"]:checked').value,
-      }
-      
-      // Registeration_data.push(data);
-    
-      Registeration_data.push(data);
-      // var x= JSON.stringify (Registeration_data);
-      localStorage.setItem("user_data",JSON.stringify(Registeration_data));  
-      console.log( Registeration_data)
-      window.location.href = "user_data.html";
+//   }}
 
-  // window.location.href = "index.html";
-  }
+//   if (scrolled>950){
+//     if(!OccupationValidation()){
+    
+//     window.scrollTo({
+//       top: 700,
+//       left:0,
+//       behavior: 'instant'
+//       });
+
+   
+   
+//     }}
+
+//     if (scrolled>2000){
+//       if(!AgeValidation()){
+//       // alert("Please!! fill the Name and Email field first ")
+//       window.scrollTo({
+//         top: 1500,
+//         left:0,
+//         behavior: 'instant'
+//         });
+     
+//       }}
+
+//       if (scrolled>3200){
+//         if(!AreaValidation()){
+//         // alert("Please!! fill the Name and Email field first ")
+//         window.scrollTo({
+//           top: 2600,
+//           left:0,
+//           behavior: 'instant'
+//           });
+       
+//         }}
+
+//         if (scrolled>4200){
+//           if(!UserValidation()){
+//           // alert("Please!! fill the Name and Email field first ")
+//           window.scrollTo({
+//             top: 3500,
+//             left:0,
+//             behavior: 'instant'
+//             });
+         
+//           }}
+
+//           if (scrolled>5200){
+//             if(!GroupValidation()){
+//             // alert("Please!! fill the Name and Email field first ")
+//             window.scrollTo({
+//               top: 4600,
+//               left:0,
+//               behavior: 'instant'
+//               });
+           
+//             }}
+
+//             if (scrolled>5900){
+//               if(!passwordValidation() || !ConfpassValidation()){
+//               // alert("Please!! fill the Name and Email field first ")
+//               window.scrollTo({
+//                 top: 5400,
+//                 left:0,
+//                 behavior: 'instant'
+//                 });
+             
+//               }}
+
+// });
+
+function search_area(){
+{
+  const searchbox = document.getElementById("area_name").value.toUpperCase();
+  console.log(searchbox)
+  const searcharea = document.getElementById("area_list");
+  console.log(searcharea)
+
+  const area1 =searcharea.getElementById("area");
+  console.log(area1)
+  
+  // const areaname = searcharea.getElementsByTagName("h4");
+// debugger
+  for (let i = 0; i<searcharea.length; i++){
+//     console.log(i)
+    let span=searcharea[i].querySelector(".title");
+    console.log(span)
   }
   
+  
+
+
+}}

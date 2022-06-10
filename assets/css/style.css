@@ -1871,6 +1871,12 @@ added css
 }
 
 
+#group_error{
+  color: red;
+}
+
+
+
 #occupation_error{
   color: red;
 }
