@@ -25,23 +25,24 @@
 
 
 
-var NAMEerror = document.getElementById("name-error");
-var EMAILerror = document.getElementById("email-error");
-var SUBMITerror = document.getElementById("fill");
+
+
 var PASSerror = document.getElementById("password1");
 var CONFPASSerror = document.getElementById("confpass")
 
+
 function NameValidation() {
   var name = document.getElementById("namechange").value;
+
   if (name.length == 0) {
-    NAMEerror.innerHTML = "Name required";
+    document.getElementById("name-error").innerHTML = "Name required";
     return false;
   }
   if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
-    NAMEerror.innerHTML = "Please enter full name";
+    var name = document.getElementById("name-error").innerHTML = "Please enter full name";
     return false;
   }
-  NAMEerror.innerHTML = '<i class="fas fa-check"></i> ';
+  var name = document.getElementById("name-error").innerHTML = '<i class="fas fa-check"></i> ';
   return true;
 }
 
@@ -49,14 +50,14 @@ function EmailValidation() {
   var email = document.getElementById('emailchange').value;
   var validRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
   if (!email.match(validRegex)) {
-    EMAILerror.innerHTML = "Please enter valid email";
+    document.getElementById("email-error").innerHTML = "Please enter valid email";
     return false;
   }
   if (email.length == 0) {
-    EMAILerror.innerHTML = "Email required";
+    document.getElementById("email-error").innerHTML = "Email required";
     return false;
   }
-  EMAILerror.innerHTML = '<i class="fas fa-check"></i>';
+  document.getElementById("email-error").innerHTML = '<i class="fas fa-check"></i>';
   return true;
 
 }
@@ -76,10 +77,11 @@ function passwordValidation() {
     document.getElementById("password1").innerHTML = "**password should contain atleast one number and one special character";
     return false;
 
-  }
+  }else{
+    document.getElementById("password1").innerHTML = "";
   PASSerror.innerHTML = '<i class="fas fa-check"></i> ';
   return true;
-
+  }
 }
 
 function ConfpassValidation() {
@@ -116,7 +118,8 @@ function AgeValidation() {
   var getSelectedValue = document.querySelector(
     'input[name="age-group-select"]:checked');
 
-  if (getSelectedValue != null) {      document.getElementById("age_error").innerHTML = "";
+  if (getSelectedValue != null) {
+    document.getElementById("age_error").innerHTML = "";
 
     return true;
 
@@ -195,59 +198,120 @@ function WhatnextValidation() {
   }
 
 }
+window.addEventListener('scroll',( )=>{
 
-
-
-function SubmitValidation() {
-  if (!NameValidation()) {
-
-    NAMEerror.innerHTML = "Name required";
+  
+  const scrolled=window.scrollY;
+  console.log(scrolled);
+  if(!NameValidation() || !EmailValidation()){
+    document.getElementById("ocphide").style.display = "none";
+    
+  }else{
+   
+    document.getElementById("ocphide").style.display = "initial";
   }
-  if (!EmailValidation()) {
-    EMAILerror.innerHTML = "Email required";
+
+  if(!OccupationValidation()){
+    document.getElementById("agehide").style.display = "none";
+    
+  }else{
+   
+    document.getElementById("agehide").style.display = "initial";
   }
-  if (!OccupationValidation()) {
-    document.getElementById("occupation_error").innerHTML = "**Select occupation!";
 
-  } else { document.getElementById("occupation_error").innerHTML = ""; }
-  if (!AgeValidation()) {
-    document.getElementById("age_error").innerHTML = "**Select age group!";
-  } else { document.getElementById("age_error").innerHTML = ""; }
-  if (!AreaValidation()) {
-    document.getElementById("area_error").innerHTML = "**Select area to follow!";
-  } else { document.getElementById("area_error").innerHTML = ""; }
-  if (!UserValidation()) {
-    document.getElementById("user_error").innerHTML = "**Select user to follow!";
-  } else { document.getElementById("user_error").innerHTML = ""; }
-  if (!GroupValidation()) {
-    document.getElementById("group_error").innerHTML = "**Select group to follow!";
-  } else { document.getElementById("group_error").innerHTML = ""; }
-  if (!WhatnextValidation()) {
-    document.getElementById("next_error").innerHTML = "**Please choose!";
-  } else {
-
-
-    let Registeration_data = [];
-    let data = {
-      name: document.getElementById("namechange").value,
-      email: document.getElementById("emailchange").value,
-      occupation: document.querySelector('input[name="occupation-select"]:checked').id,
-      age_group: document.querySelector('input[name="age-group-select"]:checked').id,
-      follow_area: document.querySelector('input[class="form-checkbox form-checkbox-areas"]:checked').id,
-      follow_user: document.querySelector('input[class="form-checkbox form-checkbox-follow"]:checked').id,
-      follow_group: document.querySelector('input[class="form-checkbox form-checkbox-groups"]:checked').id,
-      password: document.getElementById("password").value,
-      next_step: document.querySelector('input[name="what-to-do-select"]:checked').value,
-    }
-
-    Registeration_data.push(data);
-    localStorage.setItem("user_data", JSON.stringify(Registeration_data));
-    console.log(Registeration_data)
-    window.location.href = "user_data.html";
-
-
+  if(!AgeValidation()){
+    document.getElementById("areahide").style.display = "none";
+    
+  }else{
+   
+    document.getElementById("areahide").style.display = "initial";
   }
-}
+
+  if(!AreaValidation()){
+    document.getElementById("userhide").style.display = "none";
+    
+  }else{
+   
+    document.getElementById("userhide").style.display = "initial";
+  }
+
+  if(!UserValidation()){
+    document.getElementById("grouphide").style.display = "none";
+    
+  }else{
+   
+    document.getElementById("grouphide").style.display = "initial";
+  }
+
+  if(!GroupValidation()){
+    document.getElementById("passhide").style.display = "none";
+    
+  }else{
+   
+    document.getElementById("passhide").style.display = "initial";
+  }
+debugger
+  if(!passwordValidation() || !ConfpassValidation()){
+    // alert("pass")
+    console.log( document.getElementById("nexthide"))
+    document.getElementById("nexthide").style.display = "none";
+    
+  }else{
+   
+    document.getElementById("nexthide").style.display = "initial";}
+})
+
+
+// function SubmitValidation() {
+//   if (!NameValidation()) {
+
+//     NAMEerror.innerHTML = "Name required";
+//   }
+//   if (!EmailValidation()) {
+//     EMAILerror.innerHTML = "Email required";
+//   }
+//   if (!OccupationValidation()) {
+//     document.getElementById("occupation_error").innerHTML = "**Select occupation!";
+
+//   } else { document.getElementById("occupation_error").innerHTML = ""; }
+//   if (!AgeValidation()) {
+//     document.getElementById("age_error").innerHTML = "**Select age group!";
+//   } else { document.getElementById("age_error").innerHTML = ""; }
+//   if (!AreaValidation()) {
+//     document.getElementById("area_error").innerHTML = "**Select area to follow!";
+//   } else { document.getElementById("area_error").innerHTML = ""; }
+//   if (!UserValidation()) {
+//     document.getElementById("user_error").innerHTML = "**Select user to follow!";
+//   } else { document.getElementById("user_error").innerHTML = ""; }
+//   if (!GroupValidation()) {
+//     document.getElementById("group_error").innerHTML = "**Select group to follow!";
+//   } else { document.getElementById("group_error").innerHTML = ""; }
+//   if (!WhatnextValidation()) {
+//     document.getElementById("next_error").innerHTML = "**Please choose!";
+//   } else {
+
+
+//     let Registeration_data = [];
+//     let data = {
+//       name: document.getElementById("namechange").value,
+//       email: document.getElementById("emailchange").value,
+//       occupation: document.querySelector('input[name="occupation-select"]:checked').id,
+//       age_group: document.querySelector('input[name="age-group-select"]:checked').id,
+//       follow_area: document.querySelector('input[class="form-checkbox form-checkbox-areas"]:checked').id,
+//       follow_user: document.querySelector('input[class="form-checkbox form-checkbox-follow"]:checked').id,
+//       follow_group: document.querySelector('input[class="form-checkbox form-checkbox-groups"]:checked').id,
+//       password: document.getElementById("password").value,
+//       next_step: document.querySelector('input[name="what-to-do-select"]:checked').value,
+//     }
+
+//     Registeration_data.push(data);
+//     localStorage.setItem("user_data", JSON.stringify(Registeration_data));
+//     console.log(Registeration_data)
+//     window.location.href = "user_data.html";
+
+
+//   }
+// }
 
 // window.addEventListener('scroll',( )=>{
 
@@ -255,7 +319,7 @@ function SubmitValidation() {
 // const scrolled=window.scrollY;
 // console.log(scrolled);
 
-// if (scrolled>200){
+
 //   if(!NameValidation() || !EmailValidation()){
 //   // alert("Please!! fill the Name and Email field first ")
 //   window.scrollTo({
@@ -263,23 +327,23 @@ function SubmitValidation() {
 //     left:0,
 //     behavior: 'instant'
 //     });
- 
-//   }}
 
-//   if (scrolled>950){
+//   }
+
+
 //     if(!OccupationValidation()){
-    
+
 //     window.scrollTo({
 //       top: 700,
 //       left:0,
 //       behavior: 'instant'
 //       });
 
-   
-   
-//     }}
 
-//     if (scrolled>2000){
+
+//     }
+
+    
 //       if(!AgeValidation()){
 //       // alert("Please!! fill the Name and Email field first ")
 //       window.scrollTo({
@@ -287,10 +351,10 @@ function SubmitValidation() {
 //         left:0,
 //         behavior: 'instant'
 //         });
-     
-//       }}
 
-//       if (scrolled>3200){
+//       }
+
+    
 //         if(!AreaValidation()){
 //         // alert("Please!! fill the Name and Email field first ")
 //         window.scrollTo({
@@ -298,10 +362,10 @@ function SubmitValidation() {
 //           left:0,
 //           behavior: 'instant'
 //           });
-       
-//         }}
 
-//         if (scrolled>4200){
+//         }
+
+     
 //           if(!UserValidation()){
 //           // alert("Please!! fill the Name and Email field first ")
 //           window.scrollTo({
@@ -309,10 +373,10 @@ function SubmitValidation() {
 //             left:0,
 //             behavior: 'instant'
 //             });
-         
-//           }}
 
-//           if (scrolled>5200){
+//           }
+
+          
 //             if(!GroupValidation()){
 //             // alert("Please!! fill the Name and Email field first ")
 //             window.scrollTo({
@@ -320,10 +384,10 @@ function SubmitValidation() {
 //               left:0,
 //               behavior: 'instant'
 //               });
-           
-//             }}
 
-//             if (scrolled>5900){
+//             }
+
+
 //               if(!passwordValidation() || !ConfpassValidation()){
 //               // alert("Please!! fill the Name and Email field first ")
 //               window.scrollTo({
@@ -331,30 +395,187 @@ function SubmitValidation() {
 //                 left:0,
 //                 behavior: 'instant'
 //                 });
-             
-//               }}
+
+//               }
 
 // });
 
-function search_area(){
-{
-  const searchbox = document.getElementById("area_name").value.toUpperCase();
+// var griding = document.getElementsByClassName("addarea");
+// console.log(griding)
+// fetch("area.json")
+//   .then(res => res.json())
+//   .then(json => addArea(griding, json));
+// //  .then(json=>console.log(json));
+
+// function addArea(appendin, value) {
+//   let div = document.createElement('div');
+//   div.className = "row get-row mr-minus-8 addarea";
+//   // console.log(div)
+
+//   let { lable, image, title } = value;
+//   console.log("sdv"+lable, image, title)
+
+//   div.innerHTML = `
+//   <div class="col-lg-3 col-md-3 grid-20 plr-8 areabox">
+//   <div class="img-checkbox-card-box area-card-box">
+//           <label for="${lable}" class="label-box">
+//               <div class="check-box-position">
+//                   <button class="checkbox-round-div">
+//                       <i class="fe fe-check fe-custom"></i>
+//                   </button>
+//               </div>
+//               <div class="img-banner">
+//                   <img src="${image}"
+//                       class="img-fluid img-responsive" alt="area" />
+//               </div>
+//               <div class="check-title-row">
+//                   <h4 class="area1">${title}</h4>
+//               </div>
+//           </label>
+//           <input type="checkbox"
+//               class="form-checkbox form-checkbox-areas"
+//               id=""${lable}" onclick="AreaValidation()" />
+//       </div>
+//   </div>
+//    `
+//    console.log(div)
+//   appendin.appendChild(div);
+
+
+// }
+
+
+
+
+
+async function search_area() {
+  {let searchbox = document.getElementById("area_name").value.toUpperCase();
+
   console.log(searchbox)
-  const searcharea = document.getElementById("area_list");
-  console.log(searcharea)
+  const respo = await fetch ('area.json');
+  const data = await respo.json();
+  // console.log(data)
 
-  const area1 =searcharea.getElementById("area");
-  console.log(area1)
-  
-  // const areaname = searcharea.getElementsByTagName("h4");
-// debugger
-  for (let i = 0; i<searcharea.length; i++){
-//     console.log(i)
-    let span=searcharea[i].querySelector(".title");
-    console.log(span)
+  let op1 = ""
+  for (i of data){
+  areas=i.title.toUpperCase();
+  // console.log(areas)
+  if (areas.indexOf(searchbox) > -1){
+    op1+= `
+   
+      <div class="img-checkbox-card-box area-card-box">
+              <label for="${i.lable}" class="label-box">
+                  <div class="check-box-position">
+                      <button class="checkbox-round-div">
+                          <i class="fe fe-check fe-custom"></i>
+                      </button>
+                  </div>
+                  <div class="img-banner">
+                      <img src="${i.image}"
+                          class="img-fluid img-responsive" alt="area" />
+                  </div>
+                  <div class="check-title-row">
+                      <h4 class="area1">${i.title}</h4>
+                  </div>
+              </label>
+              <input type="checkbox"
+                  class="form-checkbox form-checkbox-areas"
+                  id="${i.lable}" onclick="AreaValidation()" />
+          </div>
+      
+    `
+    
   }
-  
-  
+//   else{ document.getElementById("addarea").innerHTML = "";
+//  }
+
+document.getElementById("addarea").innerHTML = ""
+document.getElementById("addarea").innerHTML = op1;
 
 
-}}
+  }}}
+
+
+
+// function search_user() {
+//   {
+//     const searchbox = document.getElementById("user_name").value.toUpperCase();
+//     console.log(searchbox)
+//     const searcharea = document.getElementsByClassName("areabox");
+//     // console.log("sarea"+searcharea)
+
+//     const area1 = document.getElementsByClassName("area1");
+//     // console.log(area1)
+
+//     // const areaname = searcharea.getElementsByTagName("h4");
+//     // debugger
+//     for (let i = 0; i < area1.length; i++) {
+//       // console.log(i)
+//       let span = area1[i].innerHTML.toUpperCase();
+//       // console.log(span)
+//       if (span.indexOf(searchbox) > -1) {
+//         // console.log("match")
+//         searcharea[i].style.display = "initial";
+
+//       } else {
+//         // console.log("dont match")
+//         searcharea[i].style.display = "none";
+//       }
+//     }
+
+
+
+
+//   }
+// }
+
+
+
+let https = new XMLHttpRequest();
+https.open('get', 'area.json', true);
+https.send();
+
+https.onload = function () {
+
+
+  
+  if (this.readyState == 4 && this.status == 200) {
+    let area = JSON.parse(this.responseText)
+    // .filter(({title}) => title === 'australia');;
+    // console.log(area)
+    let op = "";
+
+    for (let i of area) {
+
+        // console.log(i)
+
+
+          op+= `
+      <div class="col-lg-3 col-md-3 grid-20 plr-8 areabox">
+        <div class="img-checkbox-card-box area-card-box">
+                <label for="${i.lable}" class="label-box">
+                    <div class="check-box-position">
+                        <button class="checkbox-round-div">
+                            <i class="fe fe-check fe-custom"></i>
+                        </button>
+                    </div>
+                    <div class="img-banner">
+                        <img src="${i.image}"
+                            class="img-fluid img-responsive" alt="area" />
+                    </div>
+                    <div class="check-title-row">
+                        <h4 class="area1">${i.title}</h4>
+                    </div>
+                </label>
+                <input type="checkbox"
+                    class="form-checkbox form-checkbox-areas"
+                    id="${i.lable}" onclick="AreaValidation()" />
+            </div>
+        </div>
+      `
+        }
+        // console.log(op)
+        document.getElementById("addarea").innerHTML = op;
+
+      }
+    }

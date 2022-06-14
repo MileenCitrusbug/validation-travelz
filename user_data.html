@@ -17,7 +17,7 @@
 <script>
     var d=localStorage.getItem("user_data");
     var j= JSON.parse(d);
-    console.log(j)
+    // console.log(j)
     document.getElementById("data").innerHTML=d
 
 
@@ -25,6 +25,11 @@
         window.location.href = "registration.html";
 
     }
+
+    function data(){
+        fetch("area.json").then(response =>{console.log(response);})
+    }
+    data()
 
 
 </script>

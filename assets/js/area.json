@@ -1,0 +1,52 @@
+[
+    {
+        "lable": "select-area-option01",
+        "image": "assets/images/areas/areas-01.jpg",
+        "title": "Akihabara"
+    },
+    {
+        "lable": "select-area-option02",
+        "image": "assets/images/areas/areas-02.jpg",
+        "title": "Asakusa"
+    },
+    {
+        "lable": "select-area-option03",
+        "image": "assets/images/areas/areas-03.jpg",
+        "title": "Harajuku"
+    },
+    {
+        "lable": "select-area-option04",
+        "image": "assets/images/areas/areas-04.jpg",
+        "title": "Shibuya"
+    },
+    {
+        "lable": "select-area-option05",
+        "image": "assets/images/areas/areas-05.jpg",
+        "title": "Ueno"
+    },
+    {
+        "lable": "select-area-option06",
+        "image": "assets/images/areas/areas-06.jpg",
+        "title": "roam"
+    },
+    {
+        "lable": "select-area-option07",
+        "image": "assets/images/areas/areas-07.jpg",
+        "title": "paris"
+    },
+    {
+        "lable": "select-area-option08",
+        "image": "assets/images/areas/areas-08.jpg",
+        "title": "australia"
+    },
+    {
+        "lable": "select-area-option09",
+        "image": "assets/images/areas/areas-09.jpg",
+        "title": "nevada"
+    },
+    {
+        "lable": "select-area-option10",
+        "image": "assets/images/areas/areas-10.jpg",
+        "title": "norway"
+    }
+]

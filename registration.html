@@ -198,7 +198,7 @@
                     </div>
                 </div> <!-- End of User registration -->
 
-                <div class="common-div occupation-div">
+                <div class="common-div occupation-div" id="ocphide">
                     <div class="container">
                         <div class="row">
 
@@ -325,7 +325,7 @@
                     </div>
                 </div> <!-- End of occupation -->
 
-                <div class="common-div age-group-div">
+                <div class="common-div age-group-div" id="agehide">
                     <div class="container">
                         <div class="row">
 
@@ -461,7 +461,7 @@
                     </div>
                 </div> <!-- End of age-group-div -->
 
-                <div class="common-div areas-div">
+                <div class="common-div areas-div" id="areahide">
                     <div class="container">
                         <div class="row">
 
@@ -504,235 +504,20 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <ul id="areabox">
-                                                <div class="row get-row mr-minus-8" id="area_list">
 
-                                                    <div class="col-lg-3 col-md-3 grid-20 plr-8" id="area">
-                                                        <div class="img-checkbox-card-box area-card-box">
-                                                            <label for="select-area-option01" class="label-box">
-                                                                <div class="check-box-position">
-                                                                    <button class="checkbox-round-div">
-                                                                        <i class="fe fe-check fe-custom"></i>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="img-banner">
-                                                                    <img src="assets/images/areas/areas-01.jpg"
-                                                                        class="img-fluid img-responsive" alt="area" />
-                                                                </div>
-                                                                <div class="check-title-row">
-                                                                    <h4>Akihabara</h4>
-                                                                </div>
-                                                            </label>
-                                                            <input type="checkbox"
-                                                                class="form-checkbox form-checkbox-areas"
-                                                                id="select-area-option01" onclick="AreaValidation()" />
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-3 col-md-3 grid-20 plr-8" id="area">
-                                                        <div class="img-checkbox-card-box area-card-box">
-                                                            <label for="select-area-option02" class="label-box">
-                                                                <div class="check-box-position">
-                                                                    <button class="checkbox-round-div">
-                                                                        <i class="fe fe-check fe-custom"></i>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="img-banner">
-                                                                    <img src="assets/images/areas/areas-02.jpg"
-                                                                        class="img-fluid img-responsive" alt="area" />
-                                                                </div>
-                                                                <div class="check-title-row">
-                                                                    <h4>Asakusa</h4>
-                                                                </div>
-                                                            </label>
-                                                            <input type="checkbox"
-                                                                class="form-checkbox form-checkbox-areas"
-                                                                id="select-area-option02" onclick="AreaValidation()" />
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-3 col-md-3 grid-20 plr-8" id="area">
-                                                        <div class="img-checkbox-card-box area-card-box">
-                                                            <label for="select-area-option03" class="label-box">
-                                                                <div class="check-box-position">
-                                                                    <button class="checkbox-round-div">
-                                                                        <i class="fe fe-check fe-custom"></i>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="img-banner">
-                                                                    <img src="assets/images/areas/areas-03.jpg"
-                                                                        class="img-fluid img-responsive" alt="area" />
-                                                                </div>
-                                                                <div class="check-title-row">
-                                                                    <h4>Harajuku</h4>
-                                                                </div>
-                                                            </label>
-                                                            <input type="checkbox"
-                                                                class="form-checkbox form-checkbox-areas"
-                                                                id="select-area-option03" onclick="AreaValidation()" />
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-3 col-md-3 grid-20 plr-8" id="area">
-                                                        <div class="img-checkbox-card-box area-card-box">
-                                                            <label for="select-area-option04" class="label-box">
-                                                                <div class="check-box-position">
-                                                                    <button class="checkbox-round-div">
-                                                                        <i class="fe fe-check fe-custom"></i>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="img-banner">
-                                                                    <img src="assets/images/areas/areas-04.jpg"
-                                                                        class="img-fluid img-responsive" alt="area" />
-                                                                </div>
-                                                                <div class="check-title-row">
-                                                                    <h4>Shibuya</h4>
-                                                                </div>
-                                                            </label>
-                                                            <input type="checkbox"
-                                                                class="form-checkbox form-checkbox-areas"
-                                                                id="select-area-option04" onclick="AreaValidation()" />
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-3 col-md-3 grid-20 plr-8" id="area">
-                                                        <div class="img-checkbox-card-box area-card-box">
-                                                            <label for="select-area-option05" class="label-box">
-                                                                <div class="check-box-position">
-                                                                    <button class="checkbox-round-div">
-                                                                        <i class="fe fe-check fe-custom"></i>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="img-banner">
-                                                                    <img src="assets/images/areas/areas-05.jpg"
-                                                                        class="img-fluid img-responsive" alt="area" />
-                                                                </div>
-                                                                <div class="check-title-row">
-                                                                    <h4>Ueno</h4>
-                                                                </div>
-                                                            </label>
-                                                            <input type="checkbox"
-                                                                class="form-checkbox form-checkbox-areas"
-                                                                id="select-area-option05" onclick="AreaValidation()" />
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-3 col-md-3 grid-20 plr-8" id="area">
-                                                        <div class="img-checkbox-card-box area-card-box">
-                                                            <label for="select-area-option06" class="label-box">
-                                                                <div class="check-box-position">
-                                                                    <button class="checkbox-round-div">
-                                                                        <i class="fe fe-check fe-custom"></i>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="img-banner">
-                                                                    <img src="assets/images/areas/areas-06.jpg"
-                                                                        class="img-fluid img-responsive" alt="area" />
-                                                                </div>
-                                                                <div class="check-title-row">
-                                                                    <h4>Akihabara</h4>
-                                                                </div>
-                                                            </label>
-                                                            <input type="checkbox"
-                                                                class="form-checkbox form-checkbox-areas"
-                                                                id="select-area-option06" onclick="AreaValidation()" />
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-3 col-md-3 grid-20 plr-8" id="area">
-                                                        <div class="img-checkbox-card-box area-card-box">
-                                                            <label for="select-area-option07" class="label-box">
-                                                                <div class="check-box-position">
-                                                                    <button class="checkbox-round-div">
-                                                                        <i class="fe fe-check fe-custom"></i>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="img-banner">
-                                                                    <img src="assets/images/areas/areas-07.jpg"
-                                                                        class="img-fluid img-responsive" alt="area" />
-                                                                </div>
-                                                                <div class="check-title-row">
-                                                                    <h4>Asakusa</h4>
-                                                                </div>
-                                                            </label>
-                                                            <input type="checkbox"
-                                                                class="form-checkbox form-checkbox-areas"
-                                                                id="select-area-option07" onclick="AreaValidation()" />
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-3 col-md-3 grid-20 plr-8" id="area">
-                                                        <div class="img-checkbox-card-box area-card-box">
-                                                            <label for="select-area-option08" class="label-box">
-                                                                <div class="check-box-position">
-                                                                    <button class="checkbox-round-div">
-                                                                        <i class="fe fe-check fe-custom"></i>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="img-banner">
-                                                                    <img src="assets/images/areas/areas-08.jpg"
-                                                                        class="img-fluid img-responsive" alt="area" />
-                                                                </div>
-                                                                <div class="check-title-row">
-                                                                    <h4>Harajuku</h4>
-                                                                </div>
-                                                            </label>
-                                                            <input type="checkbox"
-                                                                class="form-checkbox form-checkbox-areas"
-                                                                id="select-area-option08" onclick="AreaValidation()" />
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-3 col-md-3 grid-20 plr-8" id="area">
-                                                        <div class="img-checkbox-card-box area-card-box">
-                                                            <label for="select-area-option09" class="label-box">
-                                                                <div class="check-box-position">
-                                                                    <button class="checkbox-round-div">
-                                                                        <i class="fe fe-check fe-custom"></i>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="img-banner">
-                                                                    <img src="assets/images/areas/areas-09.jpg"
-                                                                        class="img-fluid img-responsive" alt="area" />
-                                                                </div>
-                                                                <div class="check-title-row">
-                                                                    <h4>Shibuya</h4>
-                                                                </div>
-                                                            </label>
-                                                            <input type="checkbox"
-                                                                class="form-checkbox form-checkbox-areas"
-                                                                id="select-area-option09" onclick="AreaValidation()" />
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-3 col-md-3 grid-20 plr-8" id="area">
-                                                        <div class="img-checkbox-card-box area-card-box">
-                                                            <label for="select-area-option10" class="label-box">
-                                                                <div class="check-box-position">
-                                                                    <button class="checkbox-round-div">
-                                                                        <i class="fe fe-check fe-custom"></i>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="img-banner">
-                                                                    <img src="assets/images/areas/areas-10.jpg"
-                                                                        class="img-fluid img-responsive" alt="area" />
-                                                                </div>
-                                                                <div class="check-title-row">
-                                                                    <h4>Ueno</h4>
-                                                                </div>
-                                                            </label>
-                                                            <input type="checkbox"
-                                                                class="form-checkbox form-checkbox-areas"
-                                                                id="select-area-option10" onclick="AreaValidation()" />
-                                                        </div>
-                                                    </div>
-
+                                            <div class="row get-row mr-minus-8 " id="addarea">
+                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                                   
                                                 </div>
+     
+                                            </div>
+
                                         </div>
-                                        </ul>
                                     </div>
 
-                                    <!-- <div class="footer-bottom-row">
+                                </div>
+
+                                <!-- <div class="footer-bottom-row">
                                     <div class="button-row">
                                         <div class="btn-left-side justify-content-between"> 
                                             <button class="btn btn-outline-primary btn-common btn-previous">
@@ -750,409 +535,395 @@
                                     </div>
                                 </div> -->
 
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+        </div> <!-- End of areas -->
+
+        <div class="common-div follow-div" id="userhide">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12">
+
+                        <div class="common-card-div">
+
+                            <div class="heading-top-row">
+                                <div class="heading-div">
+                                    <h2>Select Users to Follow</h2>
+                                    <p>Select user and continue!</p>
+                                    <span id="user_error"></span>
+                                </div>
+                            </div>
+
+                            <div class="main-body-div">
+
+                                <div class="search-box-root">
+                                    <div class="row get-row mr-minus-8">
+                                        <div class="col-lg-12 col-md-12 plr-8">
+                                            <div class="input-group input-group-30">
+                                                <input type="text" class="form-control"
+                                                    placeholder="Select User to Follow" id="user_name"
+                                                    onkeyup="search_user()" />
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-success btn-search"><i
+                                                            class="material-icons search-icons"> search
+                                                        </i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="select-img-root most-img-root popular-user-root">
+                                    <div class="row get-row mr-minus-8">
+                                        <div class="col-lg-12 col-md-12 plr-8">
+                                            <div class="heading-h4">
+                                                <h4>Most popular User</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row get-row mr-minus-8 ">
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8 ">
+                                            <div class="user-card-box follow-card-box">
+                                                <label for="select-follow-option01" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-user-thumb">
+                                                        <img src="assets/images/user/user1.jpg"
+                                                            class="img-fluid img-user" alt="follow" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>sunny</h4>
+                                                        <p>sunnymint@gmail.com</p>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-follow"
+                                                    id="select-follow-option01" onclick="UserValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="user-card-box follow-card-box">
+                                                <label for="select-follow-option02" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-user-thumb">
+                                                        <img src="assets/images/user/user2.jpg"
+                                                            class="img-fluid img-user" alt="follow" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>rohi</h4>
+                                                        <p>rohimint@gmail.com</p>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-follow"
+                                                    id="select-follow-option02" onclick="UserValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="user-card-box follow-card-box">
+                                                <label for="select-follow-option03" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-user-thumb">
+                                                        <img src="assets/images/user/user3.jpg"
+                                                            class="img-fluid img-user" alt="follow" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>eneio</h4>
+                                                        <p>eneiomint@gmail.com</p>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-follow"
+                                                    id="select-follow-option03" onclick="UserValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="user-card-box follow-card-box">
+                                                <label for="select-follow-option04" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-user-thumb">
+                                                        <img src="assets/images/user/user4.jpg"
+                                                            class="img-fluid img-user" alt="follow" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>lana</h4>
+                                                        <p>lanamint@gmail.com</p>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-follow"
+                                                    id="select-follow-option04" onclick="UserValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="user-card-box follow-card-box">
+                                                <label for="select-follow-option05" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-user-thumb">
+                                                        <img src="assets/images/user/user5.jpg"
+                                                            class="img-fluid img-user" alt="follow" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>mike</h4>
+                                                        <p>mikemint@gmail.com</p>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-follow"
+                                                    id="select-follow-option05" onclick="UserValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="user-card-box follow-card-box">
+                                                <label for="select-follow-option06" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-user-thumb">
+                                                        <img src="assets/images/user/user6.jpg"
+                                                            class="img-fluid img-user" alt="follow" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>ele</h4>
+                                                        <p>elemint@gmail.com</p>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-follow"
+                                                    id="select-follow-option06" onclick="UserValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="user-card-box follow-card-box">
+                                                <label for="select-follow-option07" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-user-thumb">
+                                                        <img src="assets/images/user/user7.jpg"
+                                                            class="img-fluid img-user" alt="follow" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>krina</h4>
+                                                        <p>krinaint@gmail.com</p>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-follow"
+                                                    id="select-follow-option07" onclick="UserValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="user-card-box follow-card-box">
+                                                <label for="select-follow-option08" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-user-thumb">
+                                                        <img src="assets/images/user/user8.jpg"
+                                                            class="img-fluid img-user" alt="follow" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>rami</h4>
+                                                        <p>ramimint@gmail.com</p>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-follow"
+                                                    id="select-follow-option08" onclick="UserValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="user-card-box follow-card-box">
+                                                <label for="select-follow-option09" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-user-thumb">
+                                                        <img src="assets/images/user/user9.jpg"
+                                                            class="img-fluid img-user" alt="follow" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>sood</h4>
+                                                        <p>soodmint@gmail.com</p>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-follow"
+                                                    id="select-follow-option09" onclick="UserValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="user-card-box follow-card-box">
+                                                <label for="select-follow-option10" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-user-thumb">
+                                                        <img src="assets/images/user/user10.jpg"
+                                                            class="img-fluid img-user" alt="follow" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>sern</h4>
+                                                        <p>sernint@gmail.com</p>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-follow"
+                                                    id="select-follow-option10" onclick="UserValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="user-card-box follow-card-box">
+                                                <label for="select-follow-option11" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-user-thumb">
+                                                        <img src="assets/images/user/user9.jpg"
+                                                            class="img-fluid img-user" alt="follow" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>simon</h4>
+                                                        <p>simonmint@gmail.com</p>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-follow"
+                                                    id="select-follow-option11" onclick="UserValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="user-card-box follow-card-box">
+                                                <label for="select-follow-option12" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-user-thumb">
+                                                        <img src="assets/images/user/user4.jpg"
+                                                            class="img-fluid img-user" alt="follow" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>keri</h4>
+                                                        <p>kerimint@gmail.com</p>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-follow"
+                                                    id="select-follow-option12" onclick="UserValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="user-card-box follow-card-box">
+                                                <label for="select-follow-option13" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-user-thumb">
+                                                        <img src="assets/images/user/user1.jpg"
+                                                            class="img-fluid img-user" alt="follow" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>nody</h4>
+                                                        <p>nodymint@gmail.com</p>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-follow"
+                                                    id="select-follow-option13" onclick="UserValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="user-card-box follow-card-box">
+                                                <label for="select-follow-option14" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-user-thumb">
+                                                        <img src="assets/images/user/user5.jpg"
+                                                            class="img-fluid img-user" alt="follow" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>ane</h4>
+                                                        <p>enemint@gmail.com</p>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-follow"
+                                                    id="select-follow-option14" onclick="UserValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="user-card-box follow-card-box">
+                                                <label for="select-follow-option15" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-user-thumb">
+                                                        <img src="assets/images/user/user2.jpg"
+                                                            class="img-fluid img-user" alt="follow" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>viky</h4>
+                                                        <p>vikymint@gmail.com</p>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-follow"
+                                                    id="select-follow-option15" onclick="UserValidation()" />
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
 
                             </div>
 
-                        </div>
-                    </div>
-                </div> <!-- End of areas -->
-
-                <div class="common-div follow-div">
-                    <div class="container">
-                        <div class="row">
-
-                            <div class="col-lg-12 col-md-12">
-
-                                <div class="common-card-div">
-
-                                    <div class="heading-top-row">
-                                        <div class="heading-div">
-                                            <h2>Select Users to Follow</h2>
-                                            <p>Select user and continue!</p>
-                                            <span id="user_error"></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="main-body-div">
-
-                                        <div class="search-box-root">
-                                            <div class="row get-row mr-minus-8">
-                                                <div class="col-lg-12 col-md-12 plr-8">
-                                                    <div class="input-group input-group-30">
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Select User to Follow" />
-                                                        <div class="input-group-append">
-                                                            <button class="btn btn-success btn-search"><i
-                                                                    class="material-icons search-icons"> search
-                                                                </i></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="select-img-root most-img-root popular-user-root">
-                                            <div class="row get-row mr-minus-8">
-                                                <div class="col-lg-12 col-md-12 plr-8">
-                                                    <div class="heading-h4">
-                                                        <h4>Most popular User</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row get-row mr-minus-8">
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="user-card-box follow-card-box">
-                                                        <label for="select-follow-option01" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-user-thumb">
-                                                                <img src="assets/images/user/user1.jpg"
-                                                                    class="img-fluid img-user" alt="follow" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>sunny</h4>
-                                                                <p>sunnymint@gmail.com</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-follow"
-                                                            id="select-follow-option01" onclick="UserValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="user-card-box follow-card-box">
-                                                        <label for="select-follow-option02" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-user-thumb">
-                                                                <img src="assets/images/user/user2.jpg"
-                                                                    class="img-fluid img-user" alt="follow" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>rohi</h4>
-                                                                <p>rohimint@gmail.com</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-follow"
-                                                            id="select-follow-option02" onclick="UserValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="user-card-box follow-card-box">
-                                                        <label for="select-follow-option03" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-user-thumb">
-                                                                <img src="assets/images/user/user3.jpg"
-                                                                    class="img-fluid img-user" alt="follow" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>eneio</h4>
-                                                                <p>eneiomint@gmail.com</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-follow"
-                                                            id="select-follow-option03" onclick="UserValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="user-card-box follow-card-box">
-                                                        <label for="select-follow-option04" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-user-thumb">
-                                                                <img src="assets/images/user/user4.jpg"
-                                                                    class="img-fluid img-user" alt="follow" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>lana</h4>
-                                                                <p>lanamint@gmail.com</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-follow"
-                                                            id="select-follow-option04" onclick="UserValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="user-card-box follow-card-box">
-                                                        <label for="select-follow-option05" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-user-thumb">
-                                                                <img src="assets/images/user/user5.jpg"
-                                                                    class="img-fluid img-user" alt="follow" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>mike</h4>
-                                                                <p>mikemint@gmail.com</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-follow"
-                                                            id="select-follow-option05" onclick="UserValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="user-card-box follow-card-box">
-                                                        <label for="select-follow-option06" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-user-thumb">
-                                                                <img src="assets/images/user/user6.jpg"
-                                                                    class="img-fluid img-user" alt="follow" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>ele</h4>
-                                                                <p>elemint@gmail.com</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-follow"
-                                                            id="select-follow-option06" onclick="UserValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="user-card-box follow-card-box">
-                                                        <label for="select-follow-option07" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-user-thumb">
-                                                                <img src="assets/images/user/user7.jpg"
-                                                                    class="img-fluid img-user" alt="follow" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>krina</h4>
-                                                                <p>krinaint@gmail.com</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-follow"
-                                                            id="select-follow-option07" onclick="UserValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="user-card-box follow-card-box">
-                                                        <label for="select-follow-option08" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-user-thumb">
-                                                                <img src="assets/images/user/user8.jpg"
-                                                                    class="img-fluid img-user" alt="follow" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>rami</h4>
-                                                                <p>ramimint@gmail.com</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-follow"
-                                                            id="select-follow-option08" onclick="UserValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="user-card-box follow-card-box">
-                                                        <label for="select-follow-option09" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-user-thumb">
-                                                                <img src="assets/images/user/user9.jpg"
-                                                                    class="img-fluid img-user" alt="follow" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>sood</h4>
-                                                                <p>soodmint@gmail.com</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-follow"
-                                                            id="select-follow-option09" onclick="UserValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="user-card-box follow-card-box">
-                                                        <label for="select-follow-option10" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-user-thumb">
-                                                                <img src="assets/images/user/user10.jpg"
-                                                                    class="img-fluid img-user" alt="follow" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>sern</h4>
-                                                                <p>sernint@gmail.com</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-follow"
-                                                            id="select-follow-option10" onclick="UserValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="user-card-box follow-card-box">
-                                                        <label for="select-follow-option11" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-user-thumb">
-                                                                <img src="assets/images/user/user9.jpg"
-                                                                    class="img-fluid img-user" alt="follow" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>simon</h4>
-                                                                <p>simonmint@gmail.com</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-follow"
-                                                            id="select-follow-option11" onclick="UserValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="user-card-box follow-card-box">
-                                                        <label for="select-follow-option12" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-user-thumb">
-                                                                <img src="assets/images/user/user4.jpg"
-                                                                    class="img-fluid img-user" alt="follow" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>keri</h4>
-                                                                <p>kerimint@gmail.com</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-follow"
-                                                            id="select-follow-option12" onclick="UserValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="user-card-box follow-card-box">
-                                                        <label for="select-follow-option13" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-user-thumb">
-                                                                <img src="assets/images/user/user1.jpg"
-                                                                    class="img-fluid img-user" alt="follow" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>nody</h4>
-                                                                <p>nodymint@gmail.com</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-follow"
-                                                            id="select-follow-option13" onclick="UserValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="user-card-box follow-card-box">
-                                                        <label for="select-follow-option14" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-user-thumb">
-                                                                <img src="assets/images/user/user5.jpg"
-                                                                    class="img-fluid img-user" alt="follow" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>ane</h4>
-                                                                <p>enemint@gmail.com</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-follow"
-                                                            id="select-follow-option14" onclick="UserValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="user-card-box follow-card-box">
-                                                        <label for="select-follow-option15" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-user-thumb">
-                                                                <img src="assets/images/user/user2.jpg"
-                                                                    class="img-fluid img-user" alt="follow" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>viky</h4>
-                                                                <p>vikymint@gmail.com</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-follow"
-                                                            id="select-follow-option15" onclick="UserValidation()" />
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- <div class="footer-bottom-row">
+                            <!-- <div class="footer-bottom-row">
                                     <div class="button-row">
                                         <div class="btn-left-side justify-content-between"> 
                                             <button class="btn btn-outline-primary btn-common btn-previous">
@@ -1170,394 +941,379 @@
                                     </div>
                                 </div> -->
 
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div> <!-- End of follow -->
+
+        <div class="common-div areas-div group-div" id="grouphide">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12">
+
+                        <div class="common-card-div">
+
+                            <div class="heading-top-row">
+                                <div class="heading-div">
+                                    <h2>Select Group to Follow</h2>
+                                    <p>Select group and continue!</p>
+                                    <span id="group_error"> </span>
+                                </div>
+                            </div>
+
+                            <div class="main-body-div">
+
+                                <div class="search-box-root">
+                                    <div class="row get-row mr-minus-8">
+                                        <div class="col-lg-12 col-md-12 plr-8">
+                                            <div class="input-group input-group-30">
+                                                <input type="text" class="form-control"
+                                                    placeholder="Select Group to Follow" />
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-success btn-search"><i
+                                                            class="material-icons search-icons"> search
+                                                        </i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="select-img-root most-img-root">
+                                    <div class="row get-row mr-minus-8">
+                                        <div class="col-lg-12 col-md-12 plr-8">
+                                            <div class="heading-h4">
+                                                <h4>Most popular Groups</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row get-row mr-minus-8">
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="img-checkbox-card-box groups-card-box">
+                                                <label for="select-groups-option01" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-banner">
+                                                        <img src="assets/images/groups/groups01.jpg"
+                                                            class="img-fluid img-responsive" alt="groups" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>Akihabara</h4>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-groups"
+                                                    id="select-groups-option01" onclick="GroupValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="img-checkbox-card-box groups-card-box">
+                                                <label for="select-groups-option02" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-banner">
+                                                        <img src="assets/images/groups/groups02.jpg"
+                                                            class="img-fluid img-responsive" alt="groups" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>Asakusa</h4>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-groups"
+                                                    id="select-groups-option02" onclick="GroupValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="img-checkbox-card-box groups-card-box">
+                                                <label for="select-groups-option03" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-banner">
+                                                        <img src="assets/images/groups/groups03.jpg"
+                                                            class="img-fluid img-responsive" alt="groups" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>Harajuku</h4>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-groups"
+                                                    id="select-groups-option03" onclick="GroupValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="img-checkbox-card-box groups-card-box">
+                                                <label for="select-groups-option04" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-banner">
+                                                        <img src="assets/images/groups/groups04.jpg"
+                                                            class="img-fluid img-responsive" alt="groups" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>Shibuya</h4>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-groups"
+                                                    id="select-groups-option04" onclick="GroupValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="img-checkbox-card-box groups-card-box">
+                                                <label for="select-groups-option05" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-banner">
+                                                        <img src="assets/images/groups/groups05.jpg"
+                                                            class="img-fluid img-responsive" alt="groups" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>Ueno</h4>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-groups"
+                                                    id="select-groups-option05" onclick="GroupValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="img-checkbox-card-box groups-card-box">
+                                                <label for="select-groups-option06" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-banner">
+                                                        <img src="assets/images/groups/groups06.jpg"
+                                                            class="img-fluid img-responsive" alt="groups" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>Akihabara</h4>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-groups"
+                                                    id="select-groups-option06" onclick="GroupValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="img-checkbox-card-box groups-card-box">
+                                                <label for="select-groups-option07" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-banner">
+                                                        <img src="assets/images/groups/groups07.jpg"
+                                                            class="img-fluid img-responsive" alt="groups" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>Asakusa</h4>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-groups"
+                                                    id="select-groups-option07" onclick="GroupValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="img-checkbox-card-box groups-card-box">
+                                                <label for="select-groups-option08" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-banner">
+                                                        <img src="assets/images/groups/groups08.jpg"
+                                                            class="img-fluid img-responsive" alt="groups" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>Harajuku</h4>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-groups"
+                                                    id="select-groups-option08" onclick="GroupValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="img-checkbox-card-box groups-card-box">
+                                                <label for="select-groups-option09" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-banner">
+                                                        <img src="assets/images/groups/groups09.jpg"
+                                                            class="img-fluid img-responsive" alt="groups" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>Shibuya</h4>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-groups"
+                                                    id="select-groups-option09" onclick="GroupValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="img-checkbox-card-box groups-card-box">
+                                                <label for="select-groups-option10" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-banner">
+                                                        <img src="assets/images/groups/groups10.jpg"
+                                                            class="img-fluid img-responsive" alt="groups" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>Ueno</h4>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-groups"
+                                                    id="select-groups-option10" onclick="GroupValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="img-checkbox-card-box groups-card-box">
+                                                <label for="select-groups-option11" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-banner">
+                                                        <img src="assets/images/groups/groups11.jpg"
+                                                            class="img-fluid img-responsive" alt="groups" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>Akihabara</h4>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-groups"
+                                                    id="select-groups-option11" onclick="GroupValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="img-checkbox-card-box groups-card-box">
+                                                <label for="select-groups-option12" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-banner">
+                                                        <img src="assets/images/groups/groups12.jpg"
+                                                            class="img-fluid img-responsive" alt="groups" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>Asakusa</h4>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-groups"
+                                                    id="select-groups-option12" onclick="GroupValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="img-checkbox-card-box groups-card-box">
+                                                <label for="select-groups-option13" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-banner">
+                                                        <img src="assets/images/groups/groups13.jpg"
+                                                            class="img-fluid img-responsive" alt="groups" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>Harajuku</h4>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-groups"
+                                                    id="select-groups-option13" onclick="GroupValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="img-checkbox-card-box groups-card-box">
+                                                <label for="select-groups-option14" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-banner">
+                                                        <img src="assets/images/groups/groups14.jpg"
+                                                            class="img-fluid img-responsive" alt="groups" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>Shibuya</h4>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-groups"
+                                                    id="select-groups-option14" onclick="GroupValidation()" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="img-checkbox-card-box groups-card-box">
+                                                <label for="select-groups-option15" class="label-box">
+                                                    <div class="check-box-position">
+                                                        <button class="checkbox-round-div">
+                                                            <i class="fe fe-check fe-custom"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="img-banner">
+                                                        <img src="assets/images/groups/groups15.jpg"
+                                                            class="img-fluid img-responsive" alt="groups" />
+                                                    </div>
+                                                    <div class="check-title-row">
+                                                        <h4>Ueno</h4>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" class="form-checkbox form-checkbox-groups"
+                                                    id="select-groups-option15" onclick="GroupValidation()" />
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
 
                             </div>
 
-                        </div>
-                    </div>
-                </div> <!-- End of follow -->
-
-                <div class="common-div areas-div group-div">
-                    <div class="container">
-                        <div class="row">
-
-                            <div class="col-lg-12 col-md-12">
-
-                                <div class="common-card-div">
-
-                                    <div class="heading-top-row">
-                                        <div class="heading-div">
-                                            <h2>Select Group to Follow</h2>
-                                            <p>Select group and continue!</p>
-                                            <span id="group_error"> </span>
-                                        </div>
-                                    </div>
-
-                                    <div class="main-body-div">
-
-                                        <div class="search-box-root">
-                                            <div class="row get-row mr-minus-8">
-                                                <div class="col-lg-12 col-md-12 plr-8">
-                                                    <div class="input-group input-group-30">
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Select Group to Follow" />
-                                                        <div class="input-group-append">
-                                                            <button class="btn btn-success btn-search"><i
-                                                                    class="material-icons search-icons"> search
-                                                                </i></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="select-img-root most-img-root">
-                                            <div class="row get-row mr-minus-8">
-                                                <div class="col-lg-12 col-md-12 plr-8">
-                                                    <div class="heading-h4">
-                                                        <h4>Most popular Groups</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row get-row mr-minus-8">
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="img-checkbox-card-box groups-card-box">
-                                                        <label for="select-groups-option01" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-banner">
-                                                                <img src="assets/images/groups/groups01.jpg"
-                                                                    class="img-fluid img-responsive" alt="groups" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>Akihabara</h4>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-groups"
-                                                            id="select-groups-option01" onclick="GroupValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="img-checkbox-card-box groups-card-box">
-                                                        <label for="select-groups-option02" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-banner">
-                                                                <img src="assets/images/groups/groups02.jpg"
-                                                                    class="img-fluid img-responsive" alt="groups" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>Asakusa</h4>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-groups"
-                                                            id="select-groups-option02" onclick="GroupValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="img-checkbox-card-box groups-card-box">
-                                                        <label for="select-groups-option03" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-banner">
-                                                                <img src="assets/images/groups/groups03.jpg"
-                                                                    class="img-fluid img-responsive" alt="groups" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>Harajuku</h4>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-groups"
-                                                            id="select-groups-option03" onclick="GroupValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="img-checkbox-card-box groups-card-box">
-                                                        <label for="select-groups-option04" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-banner">
-                                                                <img src="assets/images/groups/groups04.jpg"
-                                                                    class="img-fluid img-responsive" alt="groups" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>Shibuya</h4>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-groups"
-                                                            id="select-groups-option04" onclick="GroupValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="img-checkbox-card-box groups-card-box">
-                                                        <label for="select-groups-option05" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-banner">
-                                                                <img src="assets/images/groups/groups05.jpg"
-                                                                    class="img-fluid img-responsive" alt="groups" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>Ueno</h4>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-groups"
-                                                            id="select-groups-option05" onclick="GroupValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="img-checkbox-card-box groups-card-box">
-                                                        <label for="select-groups-option06" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-banner">
-                                                                <img src="assets/images/groups/groups06.jpg"
-                                                                    class="img-fluid img-responsive" alt="groups" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>Akihabara</h4>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-groups"
-                                                            id="select-groups-option06" onclick="GroupValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="img-checkbox-card-box groups-card-box">
-                                                        <label for="select-groups-option07" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-banner">
-                                                                <img src="assets/images/groups/groups07.jpg"
-                                                                    class="img-fluid img-responsive" alt="groups" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>Asakusa</h4>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-groups"
-                                                            id="select-groups-option07" onclick="GroupValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="img-checkbox-card-box groups-card-box">
-                                                        <label for="select-groups-option08" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-banner">
-                                                                <img src="assets/images/groups/groups08.jpg"
-                                                                    class="img-fluid img-responsive" alt="groups" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>Harajuku</h4>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-groups"
-                                                            id="select-groups-option08" onclick="GroupValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="img-checkbox-card-box groups-card-box">
-                                                        <label for="select-groups-option09" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-banner">
-                                                                <img src="assets/images/groups/groups09.jpg"
-                                                                    class="img-fluid img-responsive" alt="groups" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>Shibuya</h4>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-groups"
-                                                            id="select-groups-option09" onclick="GroupValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="img-checkbox-card-box groups-card-box">
-                                                        <label for="select-groups-option10" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-banner">
-                                                                <img src="assets/images/groups/groups10.jpg"
-                                                                    class="img-fluid img-responsive" alt="groups" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>Ueno</h4>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-groups"
-                                                            id="select-groups-option10" onclick="GroupValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="img-checkbox-card-box groups-card-box">
-                                                        <label for="select-groups-option11" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-banner">
-                                                                <img src="assets/images/groups/groups11.jpg"
-                                                                    class="img-fluid img-responsive" alt="groups" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>Akihabara</h4>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-groups"
-                                                            id="select-groups-option11" onclick="GroupValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="img-checkbox-card-box groups-card-box">
-                                                        <label for="select-groups-option12" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-banner">
-                                                                <img src="assets/images/groups/groups12.jpg"
-                                                                    class="img-fluid img-responsive" alt="groups" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>Asakusa</h4>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-groups"
-                                                            id="select-groups-option12" onclick="GroupValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="img-checkbox-card-box groups-card-box">
-                                                        <label for="select-groups-option13" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-banner">
-                                                                <img src="assets/images/groups/groups13.jpg"
-                                                                    class="img-fluid img-responsive" alt="groups" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>Harajuku</h4>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-groups"
-                                                            id="select-groups-option13" onclick="GroupValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="img-checkbox-card-box groups-card-box">
-                                                        <label for="select-groups-option14" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-banner">
-                                                                <img src="assets/images/groups/groups14.jpg"
-                                                                    class="img-fluid img-responsive" alt="groups" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>Shibuya</h4>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-groups"
-                                                            id="select-groups-option14" onclick="GroupValidation()" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="img-checkbox-card-box groups-card-box">
-                                                        <label for="select-groups-option15" class="label-box">
-                                                            <div class="check-box-position">
-                                                                <button class="checkbox-round-div">
-                                                                    <i class="fe fe-check fe-custom"></i>
-                                                                </button>
-                                                            </div>
-                                                            <div class="img-banner">
-                                                                <img src="assets/images/groups/groups15.jpg"
-                                                                    class="img-fluid img-responsive" alt="groups" />
-                                                            </div>
-                                                            <div class="check-title-row">
-                                                                <h4>Ueno</h4>
-                                                            </div>
-                                                        </label>
-                                                        <input type="checkbox"
-                                                            class="form-checkbox form-checkbox-groups"
-                                                            id="select-groups-option15" onclick="GroupValidation()" />
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- <div class="footer-bottom-row">
+                            <!-- <div class="footer-bottom-row">
                                     <div class="button-row">
                                         <div class="btn-left-side justify-content-between"> 
                                             <button class="btn btn-outline-primary btn-common btn-previous">
@@ -1575,75 +1331,71 @@
                                     </div>
                                 </div> -->
 
-                                </div>
+                        </div>
 
+                    </div>
+
+                </div>
+            </div>
+        </div> <!-- End of Groups -->
+
+        <div class="common-div password-div" id="passhide">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12">
+
+                        <div class="common-card-div">
+
+                            <div class="heading-top-row">
+                                <div class="heading-div">
+                                    <h2>Password setup</h2>
+                                    <p>Enter password and confirm password!</p>
+                                </div>
                             </div>
 
-                        </div>
-                    </div>
-                </div> <!-- End of Groups -->
+                            <div class="main-body-div main-body-div2">
 
-                <div class="common-div password-div">
-                    <div class="container">
-                        <div class="row">
-
-                            <div class="col-lg-12 col-md-12">
-
-                                <div class="common-card-div">
-
-                                    <div class="heading-top-row">
-                                        <div class="heading-div">
-                                            <h2>Password setup</h2>
-                                            <p>Enter password and confirm password!</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="main-body-div main-body-div2">
-
-                                        <div class="login-div">
-                                            <div class="row mr-minus-8">
-                                                <div class="col-lg-6 col-md-6 plr-8">
-                                                    <div class="form-div">
-                                                        <div class="form-group">
-                                                            <label for="">Enter password</label>
-                                                            <div class="input-group-box password-box">
-                                                                <input type="password" class="form-control"
-                                                                    name="password" id="password"
-                                                                    placeholder="Enter password"
-                                                                    onkeyup="passwordValidation()">
-                                                                <span id="password1"></span>
-                                                                <button type="button" id="show_password"
-                                                                    name="show_password"
-                                                                    class="pass-hide password-view-click"><i
-                                                                        class="material-icons password-view">remove_red_eye</i></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6 plr-8">
-                                                    <div class="form-div">
-                                                        <div class="form-group">
-                                                            <label for="">Confirm password</label>
-                                                            <div class="input-group-box password-box">
-                                                                <input type="password" class="form-control"
-                                                                    name="password" id="confirm-password"
-                                                                    placeholder="Enter confirm password"
-                                                                    onkeyup="ConfpassValidation()">
-                                                                <span id="confpass"></span>
-                                                                <button type="button" id="show_password2"
-                                                                    name="show_password"
-                                                                    class="pass-hide password-view-click"><i
-                                                                        class="material-icons password-view">remove_red_eye</i></button>
-                                                            </div>
-                                                        </div>
+                                <div class="login-div">
+                                    <div class="row mr-minus-8">
+                                        <div class="col-lg-6 col-md-6 plr-8">
+                                            <div class="form-div">
+                                                <div class="form-group">
+                                                    <label for="">Enter password</label>
+                                                    <div class="input-group-box password-box">
+                                                        <input type="password" class="form-control" name="password"
+                                                            id="password" placeholder="Enter password"
+                                                            onkeyup="passwordValidation()">
+                                                        <span id="password1"></span>
+                                                        <button type="button" id="show_password" name="show_password"
+                                                            class="pass-hide password-view-click"><i
+                                                                class="material-icons password-view">remove_red_eye</i></button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-
+                                        <div class="col-lg-6 col-md-6 plr-8">
+                                            <div class="form-div">
+                                                <div class="form-group">
+                                                    <label for="">Confirm password</label>
+                                                    <div class="input-group-box password-box">
+                                                        <input type="password" class="form-control" name="password"
+                                                            id="confirm-password" placeholder="Enter confirm password"
+                                                            onkeyup="ConfpassValidation()">
+                                                        <span id="confpass"></span>
+                                                        <button type="button" id="show_password2" name="show_password"
+                                                            class="pass-hide password-view-click"><i
+                                                                class="material-icons password-view">remove_red_eye</i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
+                                </div>
 
-                                    <!-- <div class="footer-bottom-row">
+                            </div>
+
+                            <!-- <div class="footer-bottom-row">
                                     <div class="button-row button-row02 justify-content-end">
                                         <div class="btn-left-side"> 
                                             <button class="btn btn-outline-primary btn-common btn-previous">
@@ -1660,87 +1412,86 @@
                                     </div>
                                 </div> -->
 
-                                </div>
+                        </div>
 
+                    </div>
+
+                </div>
+            </div>
+        </div> <!-- End of Password -->
+
+        <div class="common-div what-to-do-div" id="nexthide">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12">
+
+                        <div class="common-card-div">
+
+                            <div class="heading-top-row">
+                                <div class="heading-div">
+                                    <h2>What to do next</h2>
+                                    <p>Choose option and continue!</p>
+                                    <span id="next_error"></span>
+                                </div>
                             </div>
 
-                        </div>
-                    </div>
-                </div> <!-- End of Password -->
+                            <div class="main-body-div">
 
-                <div class="common-div what-to-do-div">
-                    <div class="container">
-                        <div class="row">
-
-                            <div class="col-lg-12 col-md-12">
-
-                                <div class="common-card-div">
-
-                                    <div class="heading-top-row">
-                                        <div class="heading-div">
-                                            <h2>What to do next</h2>
-                                            <p>Choose option and continue!</p>
-                                            <span id="next_error"></span>
+                                <div class="select-img-root">
+                                    <div class="row get-row mr-minus-8 justify-content-center">
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="radio-card-box what-to-do-card-box">
+                                                <label for="what-to-do-radio01" class="label-box">
+                                                    <div class="icon-img-thumb">
+                                                        <i class="custom-icon proceed-timeline-icon"></i>
+                                                    </div>
+                                                    <div class="title-row">
+                                                        <p>Proceed to Timeline</p>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" class="form-radio form-radio-what-to-do"
+                                                    id="what-to-do-radio01" name="what-to-do-select"
+                                                    value="Proceed to Timeline" onclick="WhatnextValidation()" />
+                                            </div>
                                         </div>
-                                    </div>
-
-                                    <div class="main-body-div">
-
-                                        <div class="select-img-root">
-                                            <div class="row get-row mr-minus-8 justify-content-center">
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="radio-card-box what-to-do-card-box">
-                                                        <label for="what-to-do-radio01" class="label-box">
-                                                            <div class="icon-img-thumb">
-                                                                <i class="custom-icon proceed-timeline-icon"></i>
-                                                            </div>
-                                                            <div class="title-row">
-                                                                <p>Proceed to Timeline</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="radio" class="form-radio form-radio-what-to-do"
-                                                            id="what-to-do-radio01" name="what-to-do-select"
-                                                            value="Proceed to Timeline"
-                                                            onclick="WhatnextValidation()" />
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="radio-card-box what-to-do-card-box">
+                                                <label for="what-to-do-radio02" class="label-box">
+                                                    <div class="icon-img-thumb">
+                                                        <i class="custom-icon create-map-icon"></i>
                                                     </div>
-                                                </div>
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="radio-card-box what-to-do-card-box">
-                                                        <label for="what-to-do-radio02" class="label-box">
-                                                            <div class="icon-img-thumb">
-                                                                <i class="custom-icon create-map-icon"></i>
-                                                            </div>
-                                                            <div class="title-row">
-                                                                <p>Create a Map</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="radio" class="form-radio form-radio-what-to-do"
-                                                            id="what-to-do-radio02" value="Create a Map"
-                                                            name="what-to-do-select" onclick="WhatnextValidation()" />
+                                                    <div class="title-row">
+                                                        <p>Create a Map</p>
                                                     </div>
-                                                </div>
-                                                <div class="col-lg-3 col-md-3 grid-20 plr-8">
-                                                    <div class="radio-card-box what-to-do-card-box">
-                                                        <label for="what-to-do-radio03" class="label-box">
-                                                            <div class="icon-img-thumb">
-                                                                <i class="custom-icon travel-plan-icon"></i>
-                                                            </div>
-                                                            <div class="title-row">
-                                                                <p>Create a travel plan</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="radio" class="form-radio form-radio-what-to-do"
-                                                            id="what-to-do-radio03" value="Create a travel plan"
-                                                            name="what-to-do-select" onclick="WhatnextValidation()" />
+                                                </label>
+                                                <input type="radio" class="form-radio form-radio-what-to-do"
+                                                    id="what-to-do-radio02" value="Create a Map"
+                                                    name="what-to-do-select" onclick="WhatnextValidation()" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 grid-20 plr-8">
+                                            <div class="radio-card-box what-to-do-card-box">
+                                                <label for="what-to-do-radio03" class="label-box">
+                                                    <div class="icon-img-thumb">
+                                                        <i class="custom-icon travel-plan-icon"></i>
                                                     </div>
-                                                </div>
-
+                                                    <div class="title-row">
+                                                        <p>Create a travel plan</p>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" class="form-radio form-radio-what-to-do"
+                                                    id="what-to-do-radio03" value="Create a travel plan"
+                                                    name="what-to-do-select" onclick="WhatnextValidation()" />
                                             </div>
                                         </div>
 
                                     </div>
+                                </div>
 
-                                    <!-- <div class="footer-bottom-row">
+                            </div>
+
+                            <!-- <div class="footer-bottom-row">
                                     <div class="button-row button-row02">
                                         <div class="btn-left-side justify-content-between"> 
                                             <button class="btn btn-outline-primary btn-common btn-previous">
@@ -1757,35 +1508,35 @@
                                     </div>
                                 </div> -->
 
-                                </div>
-
-                            </div>
-
                         </div>
-                    </div>
-                </div> <!-- End of what-to-do -->
 
-                <div class="step-progress-div">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12">
-                                <div class="progress-root">
-                                    <div class="progress">
-                                        <div class="progress-bar" style="width:16%"></div>
-                                    </div>
-                                    <span class="progress-count">16%</span>
-                                </div>
+                    </div>
+
+                </div>
+            </div>
+        </div> <!-- End of what-to-do -->
+
+        <div class="step-progress-div">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="progress-root">
+                            <div class="progress">
+                                <div class="progress-bar" style="width:16%"></div>
                             </div>
+                            <span class="progress-count">16%</span>
                         </div>
                     </div>
                 </div>
-
-
-            </section>
-
+            </div>
         </div>
 
-        <a href="javascript:" class="return-to-top"><i class="fas fa-chevron-up"></i></a>
+
+        </section>
+
+    </div>
+
+    <a href="javascript:" class="return-to-top"><i class="fas fa-chevron-up"></i></a>
 
     </div><!-- end of wrapper -->
 
